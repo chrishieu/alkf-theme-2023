@@ -1,0 +1,881 @@
+.our_insights_home {
+    padding-bottom: 150px;
+}
+
+
+.hide_sub[data-id="art"]{
+    display: none!important;
+}
+
+.people.section-pri .people-subtitle{
+    width: 100%;
+}
+.hero-top{
+    gap: 5%;
+}
+.our_insights_home .slider-subtitle{
+    font-size: 3.3333333333vw;
+}
+/* * */
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    /* footer */
+    .footer-info .content {
+        width: 95%;
+    }
+
+    .footer .footer-row {
+        display: flex !important;
+        gap: 12px;
+    }
+
+    .footer-info .content,
+    .footer-info .content a {
+        font-size: clamp(14px, 1.5vw, 36px);
+    }
+
+    .footer-copyright {
+        font-size: clamp(16px, 1.5vw, 36px);
+    }
+
+    .footer-url a {
+        font-size: clamp(16px, 1.5vw, 36px);
+    }
+
+    .footer-bottom {
+        row-gap: 20px;
+        padding: 35px 0;
+        border-top: 1px solid #000;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .footer-url a {
+        text-decoration: underline;
+        font-size: clamp(14px, 1.0416666667vw, 20px);
+        margin-left: 1.8229166667vw;
+    }
+
+    .alkf_aboutUs_section .vision-row {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .vision-item .line {
+        object-fit: fill;
+        object-position: left;
+    }
+
+    .vision-item .number {
+        font-size: clamp(60px, 25vw, 90px) !important;
+        line-height: 1;
+    }
+
+    .vision-item .txt {
+        font-size: clamp(13px, 2.5vw, 26px) !important;
+    }
+
+    /* about-us */
+    .alkf_aboutUs_about {
+        display: flex;
+        gap: 0 5.781%;
+    }
+
+    .alkf_role.text.max_content{
+        max-width: min-content;
+    }
+
+    .alkf_people_s3 .alkf_people_50.alkf_grid_1_2{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 24px;
+    }
+
+    .alkf_people_50.alkf_grid_1_2 .alkf_role:nth-child(2){
+        padding-top: 0;
+    }
+
+    .alkf_aboutUs_people .alkf_people_s3 .alkf_role_before{
+        padding-left: 50px;
+    }
+    .alkf_aboutUs_people .alkf_people_s3 .alkf_role_before::before{
+        left: 0;
+        top: 0;
+        bottom: 50%;
+    }
+    .text_hide_mob {
+        display: inline-block !important;
+    }
+
+    .text_show_mob {
+        display: none !important;
+    }
+
+    .alkf_people.alkf_grid_1_1 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* career */
+    .hide_on_desktop {
+        display: none !important;
+    }
+
+    .hide_on_mobile {
+        display: inline-block !important;
+    }
+
+    .alkf_career_section .vision-row {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .alkf_career_title .title_h1 {
+        font-size: clamp(24px, 5vw, 60px);
+    }
+
+    .alkf_career_about {
+        padding-top: 119px;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0 5.781%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .alkf_career_about_img {
+        width: 100%;
+        max-height: 400px;
+        max-width: 284px;
+    }
+    .alkf_aboutUs_sec_5{
+        display: block;
+    }
+
+    .alkf_aboutUs_our_awards{
+        /* border-top: none; */
+    }
+
+    .alkf_career_about_img .mobile_career_founder {
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    .alkf_mobile_text_5 .alkf_career_about_contents .alkf_career_main_contents p {
+        position: relative;
+    }
+
+    .alkf_mobile_text_5 .alkf_career_about_contents .alkf_career_main_contents p,
+    .alkf_mobile_text_4 .alkf_career_about_contents .alkf_career_main_contents p,
+    .alkf_mobile_text_5 .alkf_career_about_contents .alkf_career_name p,
+    .alkf_mobile_text_2 .alkf_career_about_contents .alkf_career_name p,
+    .alkf_mobile_text_4 .alkf_career_about_contents .alkf_career_name p {
+        font-size: clamp(20px, 2vw, 36px)!important;
+        line-height: 120% !important;
+    }
+
+    .alkf_mobile_text_4 .alkf_career_about_contents .alkf_career_main_contents p::before,
+    .alkf_mobile_text_5 .alkf_career_about_contents .alkf_career_main_contents p::before {
+        width: 40%;
+        height: 1px;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -10px;
+        background: #000;
+    }
+
+    .alkf_mobile_text_2 .alkf_career_about_contents .alkf_career_main_contents p {
+        margin-top: 0;
+    }
+
+    .alkf_career_about_img {
+        grid-template-columns: 1fr;
+    }
+
+    .alkf_mobile_text_4 .strategies_des p,
+    .alkf_mobile_text_5 .strategies_des p {
+        font-size: clamp(16px, 1.75vw, 36px) !important;
+        line-height: 120% !important;
+    }
+
+    .alkf_mobile_text_2 .alkf_career_about_contents .alkf_career_main_contents p {
+        font-size: clamp(12px, 3vw, 36px);
+        line-height: 120%;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .alkf_mobile_text_4 .alkf_career_about_contents .alkf_career_main_contents p {
+        /* font-size: clamp(12px, 2vw, 36px); */
+        line-height: 120%;
+        margin-top: 0;
+    }
+
+    .alkf_career_about_img img {
+        min-width: 284px;
+        max-height: 376px;
+    }
+
+    .alkf_mobile_text_5 .alkf_career_about_img {
+        margin-top: calc(clamp(24px, 3.7vw, 70px) + 40px);
+    }
+
+    .alkf_mobile_text_4 .alkf_career_about_img {
+        margin-top: calc(clamp(14px, 6vw, 44px) + 60px + 0.625vw);
+    }
+
+    .alkf_mobile_text_5 .strategies_title p {
+        font-size: clamp(12px, 3vw, 36px) !important;
+        line-height: 120%!important;
+    }
+
+    .alkf_mobile_text_4 .strategies_title,
+    .alkf_mobile_text_4 .strategies_title p {
+        line-height: 1 !important;
+        font-size: clamp(14px, 6vw, 44px) !important;
+    }
+
+    .perks_desc ul {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .perks_desc ul li {
+        width: 100%;
+        font-size: clamp(24px, 5vw, 36px)
+    }
+
+    .perks_desc {
+        margin-top: 36px;
+        margin-bottom: 128px;
+    }
+
+    .perks_desc ul li:nth-child(1) {
+        order: 1
+    }
+
+    .perks_desc ul li:nth-child(2) {
+        order: 3
+    }
+
+    .perks_desc ul li:nth-child(3) {
+        order: 5
+    }
+
+    .perks_desc ul li:nth-child(4) {
+        order: 2
+    }
+
+    .perks_desc ul li:nth-child(5) {
+        order: 4
+    }
+
+    .perks_desc ul li:nth-child(6) {
+        order: 6
+    }
+
+    .perks_desc ul li {
+        font-size: clamp(24px, 1.875vw, 36px);
+    }
+
+    .alkf_career_sec_9 .application_title span,
+    .alkf_career_sec_7 .perks_title p  {
+        font-size: clamp(24px, 5vw, 64px);
+    }
+
+    .application_position p,
+    .application_position button {
+        font-size: clamp(24px, 1.875vw, 36px);
+        line-height: 1;
+    }
+
+    .application_position {
+        padding: 30px 0;
+    }
+
+    .alkf_career_sec_4 .alkf_career_about .alkf_career_about_contents{
+        order: 1;
+    }
+    .alkf_career_sec_4 .alkf_career_about .alkf_career_about_img{
+        order: 2;
+    }
+
+    /* popup */
+    .job_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        padding: 80px 50px 50px 50px;
+    }
+
+    .job_container ul li {
+        font-size: clamp(12px, 1.25vw, 22px);
+    }
+
+    .job_container h4 {
+        font-size: clamp(36px, 3.5vw, 64px);
+    }
+
+    .job_container h5 {
+        font-size: clamp(18px, 3vw, 24px);
+    }
+
+    .close_jobdesc {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* insights_detail */
+    .alkf_project_detail_page.alkf_insight_detail_page .alkf_text_right {
+        width: 70%;
+    }
+    .alkf_insights_swiper .slider-item .insights_one_img img{
+        height: 450px;
+    }
+
+    .alfk_project_detail_content {
+        display: flex;
+    }
+
+    .alfk_project_detail_content .alfk_box_left,
+    .alfk_project_detail_content .alfk_box_right {
+        width: 50%;
+    }
+
+    .alfk_project_detail_content .alfk_box_right .alfk_box_top {
+        height: 81.7%;
+        width: 100%;
+    }
+
+    .alfk_project_detail_content .alfk_box_right .alfk_box_bot {
+        padding-left: 20%;
+        display: flex;
+        align-items: end;
+    }
+
+    .alfk_project_detail_content .alfk_box_right .alfk_box_bot {
+        order: 2;
+    }
+
+    .alkf_insights_slider .item .content .title{
+        font-size: 18px;
+        height: 36px;
+    }
+
+    .alkf_insights_slider .item .content .des{
+        font-size: 14px;
+    }
+
+    /* insights */
+    .alkf_insights_swiper .slider-item .alkf_insights_title h1 {
+        font-size: clamp(24px, 5vw, 45px);
+    }
+
+    .alkf_insights_swiper .alkf_insights_title .title_year {
+        font-size: clamp(12px, 1.5vw, 24px);
+        max-width: 30%;
+    }
+
+    .alkf_insights_swiper .slider-item .swiper-date {
+        display: block;
+    }
+
+    .alkf_insights_swiper .swiper-counter {
+        display: block;
+        top: 13vw;
+    }
+
+    .alkf_insights_swiper .slider-item .alkf_insights_title {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .alkf_insights_swiper {
+        margin-top: 30px;
+    }
+
+    .alkf_insights_swiper .slider-item .alkf_insights_title {
+        order: inherit;
+    }
+
+    /* news */
+    .alkf_page_new_box .slider-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .alkf_news_page_content .alkf_news_page_item .alkf_insights_title .title_year{
+        font-size: clamp(24px, 3.5vw, 40px);
+    }
+    .alkf_project_completion_content {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        display: grid !important;
+    }
+
+    .alkf_project_content .short img,
+    .short .img {
+        height: 400px;
+    }
+
+    .alkf_project_content .long img,
+    .long .img {
+        height: 600px;
+    }
+
+    .alkf_project_detail_page .alkf_text_left {
+        width: 65%;
+    }
+
+    .alkf_project_detail_page .alkf_project_detail_sc {
+        flex-wrap: nowrap;
+    }
+
+    /* project */
+    .alkf_project_content {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    .alkf_project_banner {
+        height: 500px;
+    }
+
+    .alkf_project_header .alkf_project_left h1{
+        font-size: clamp(22px, 5vw, 36px);
+    }
+
+    .alkf_project_completion{
+        height: calc(clamp(22px, 5vw, 37px) * 2);
+        border-bottom: 1px solid #000;
+    }
+    .alkf_project_header .alkf_project_right ul li:before{
+        bottom: 10px;
+    }
+
+    .alkf_project_header .alkf_project_right ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end; 
+    }
+    .project_menu_desk{
+        display: block;
+    }
+    nav.navigation{
+        display: none;
+    }
+    .alkf_project_header .alkf_project_right ul li{
+        font-size: clamp(14px, 1.25vw, 20px);
+        line-height: clamp(22px, 5vw, 40px);
+    }
+    .alkf_project_header .alkf_project_right{
+        width: 80%;
+    }
+
+    .alkf_project_build_page .alkf_project_header .alkf_project_right{
+        border-bottom: 1px solid #000;
+        height: calc(clamp(22px, 5vw, 37px) * 2);
+    }
+    .alkf_project_build_page .submenu_project .alkf_project_right{
+        border-bottom: none;
+    }
+    /* index */
+    .title-h1.hero-title {
+        font-size: clamp(24px, 3.3vw, 42px);
+        max-width: 87%;
+    }
+
+    .hero-year {
+        display: block;
+        font-size: clamp(16px, 1.25vw, 28px);
+        /* line-height: clamp(24px, 3.5vw, 36px); */
+        text-align: right;
+        width: 13%;
+    }
+
+    .people.section-pri .people-grid {
+        z-index: 1;
+        display: flex !important;
+        margin-top: 88px;
+        margin-bottom: 150px;
+        flex-wrap: nowrap;
+        gap: 0 12px;
+    }
+
+    .people-item .people-item-title .title-h2 {
+        font-size: clamp(20px, 3.3vw, 40px) !important;
+    }
+
+    .section-pri .vision-row {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .section-pri .vision-item {
+        text-align: center;
+    }
+
+    .slider.section-pri .swiper-slide,
+    .slider.our_insights_home .swiper-slide {
+        width: 33.3333333333%;
+    }
+
+    .section_slPro .swiper-ctrl,
+    .our_insights_home .swiper-ctrl {
+        display: none;
+    }
+
+    .section-pri .title-h2,
+    .our_insights_home .title-h2 {
+        font-size: clamp(20px, 3vw, 48px) !important;
+    }
+
+    .vision-subtitle,
+    .our_insights_home .slider-subtitle,
+    .section-pri .people-subtitle {
+        font-size: clamp(30px, 4vw, 42px);
+    }
+
+    .section-pri .people-subtitle br {
+        display: none;
+    }
+
+    .people.section-pri .people-grid.hide_on_mobile {
+        display: none !important;
+    }
+
+    .people.section-pri .people_swiper.hide_on_desktop {
+        display: block !important;
+    }
+
+    .align-underline.align-hover.active.is-hover .hover {
+        width: 200px;
+    }
+
+    .align-hover .hover .info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        font-size: .9375vw;
+        padding-top: 10px;
+        display: flex;
+        border-top: 1px solid #000;
+        gap: 16px;
+    }
+
+    .award-content {
+        padding: 0 40px;
+        /*img=200px/5 = 40px*/
+    }
+
+    .hero-txt .big{
+        font-size: clamp(40px, 12.5vw, 240px);
+    }
+
+
+    /* header menu */
+    .header-menu-wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .header-menu-left {
+        order: 1;
+        width: 50%;
+    }
+
+    .header-menu-right {
+        order: 2;
+    }
+
+    .menu ul {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+
+    .menu ul li {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #262626;
+        border: 1px solid #000;
+        -webkit-transform: translate(100%, -100%);
+        transform: translate(100%, -100%);
+        -webkit-transition: .4s ease-out;
+        transition: .4s ease-out;
+        -webkit-transition-delay: .5s;
+        transition-delay: .5s
+    }
+
+    .menu-open .menu ul li {
+        -webkit-transform: none;
+        transform: none
+    }
+
+    .menu ul a {
+        font-size: clamp(10px, 2.5vw, 36px);
+        padding: 33px;
+    }
+
+    .menu ul li:nth-child(1) {
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 1
+    }
+
+    .menu ul li:nth-child(2) {
+        width: 75% !important;
+        height: 75% !important;
+        z-index: 2
+    }
+
+    .menu ul li:nth-child(3) {
+        width: 50% !important;
+        height: 50% !important;
+        z-index: 3
+    }
+
+    .menu ul li:nth-child(4) {
+        width: 27% !important;
+        height: 27% !important;
+        z-index: 4
+    }
+
+    .header-menu-close.headerClose {
+        position: unset;
+        top: 50px;
+        right: 30px;
+        width: 100%;
+        max-width: 24px;
+    }
+
+    .header-menu-info .content {
+        font-size: clamp(10px, 1.5vw, 16px);
+    }
+
+
+    .header-menu-info .content a {
+        display: block
+    }
+
+    .header-menu-left>div:first-child {
+        position: relative;
+    }
+
+    .header-menu-wrap {
+        padding-top: 0;
+    }
+
+    .cl_form .form_des p{
+        font-size: clamp(14px, 2.5vw, 28px);
+    }
+
+    .input_field .input_txt_effect{
+        font-size: clamp(18px, 2.5vw, 28px);
+    }
+    .award-wrap{
+        padding-bottom: 170px;
+    }
+
+    .vision-wrap.section-pri .vision-title{
+        margin-bottom: 40px;
+    }
+
+    .vision-wrap.section-pri{
+        padding-bottom: 170px;
+    }
+
+    .hero .hero-txt:not(:last-child){
+        margin-top: 5%;
+    }
+
+    .swiper-backface-hidden .swiper-button-next, .swiper-backface-hidden .swiper-rtl .swiper-button-next,
+    .swiper-backface-hidden .swiper-rtl .swiper-button-prev, .swiper-backface-hidden .swiper-button-prev {
+        top: 42%;
+    }
+
+     
+    .alkf_project_insights .insights_one .swiper-backface-hidden .swiper-button-next, 
+    .alkf_project_insights .insights_one .swiper-backface-hidden .swiper-rtl .swiper-button-next,
+    .alkf_project_insights .insights_one .swiper-backface-hidden .swiper-rtl .swiper-button-prev, 
+    .alkf_project_insights .insights_one .swiper-backface-hidden .swiper-button-prev {
+        top: 65%;
+    }
+    .alkf_project_detail_page{
+        padding-top:0;
+    }
+
+    /* search */
+    .alkf_search_page .alkf_insights_swiper{
+        margin: 60px 0;
+    }
+    .alkf_search_page_form{
+        max-width: 75%;
+    }
+   .alkf_search_page_form input{
+        width: 100%;
+        background: #F2F0F0;
+        padding: 5px 15px;
+        border: 1px solid #000;
+        border-bottom: 2px solid #000;
+        height: 41px;
+        max-width: 86%;
+   }
+   .alkf_search_page_form button{
+        position: absolute;
+        top: 0;
+        right: 30px;
+        width: 40px;
+        height: 100%;
+   }
+}
+
+@media only screen and (max-width: 767px) {
+    .alkf_people.alkf_grid_1_1 {
+        grid-template-columns: 1fr;
+    }
+
+    .our_insights_home {
+        padding-bottom: 20px;
+    }
+
+    .section-pri .title-h2,
+    .our_insights_home .title-h2 {
+        font-size: clamp(18px, 2vw, 36px) !important;
+    }
+
+    .vision-subtitle,
+    .our_insights_home .slider-subtitle,
+    .section-pri .people-subtitle {
+        font-size: clamp(24px, 2vw, 48px);
+    }
+
+    .section-pri .people-subtitle br {
+        display: none;
+    }
+
+    .award-wrap{
+        padding-bottom: 22px;
+    }
+}
+
+body{
+    padding: 0;
+}
+.alkf_project_container_fluid{
+    margin: 0 auto;
+}
+
+.container,
+.alkf_project_container_fluid {
+    padding: 0 20px;
+    box-sizing: border-box;
+} 
+@media (min-width: 200px){
+    .hero-txt .big{
+        font-size: 11.5vw;
+    }
+    .alkf_project_completion{
+        height: auto;
+    }
+
+    /* font title */
+    /* .alkf_insights_swiper .slider-item .alkf_insights_title h1,
+    .alkf_project_detail_title .title_h1, 
+    .alkf_project_detail_title .title_year{
+       font-size: clamp(24px, 3.3333333333333335vw, 64px);
+    } */
+}
+@media (min-width: 768px){
+    .container,
+    .alkf_project_container_fluid {
+        padding: 0 30px;
+    }
+    .hero-txt .big{
+        font-size: clamp(80px, 12vw, 214px);
+    }
+    .main{
+        padding-top: 100px;
+    }
+}
+@media (min-width: 1201px){
+    .alkf_project_aboutUs .alkf_aboutUs_sec_1 .alkf_aboutUs_title .title_h1{
+        padding-top: 0px;
+    }
+    .alkf_project_build_page .alkf_project_header .alkf_project_right{
+        border-bottom: 1px solid #000;
+        height: 143px;
+    }
+    .alkf_project_build_page .submenu_project .alkf_project_right{
+        border-bottom: none;
+    }
+    .main{
+        padding-top: 150px;
+    }
+    .hero-wrap.section-pri{
+        padding-top: 0;
+    }
+    .vision-wrap.section-pri{
+        padding-bottom: 220px;
+    }
+    .award-wrap .award-content{
+        margin-bottom: 250px;
+    }
+}
+@media (min-width: 1280px){
+    .container,
+    .alkf_project_container_fluid {
+        padding: 0 60px;
+    }
+    .hero-txt .big{
+        font-size: clamp(100px, 12vw, 244px);
+    }
+}
+@media (min-width: 1920px){
+    .container,
+    .alkf_project_container_fluid {
+        max-width: 1800px;
+        padding: 0;
+    } 
+    .alkf_insights_slider .alkf_page_new_box .item_small{
+        width: 100%;
+    }
+    .hero-top .title-h1{
+        font-size: clamp(60px, 3.3333333333vw, 64px);
+    }
+    .hero-top .hero-year{
+        width: 10.333333%;
+    }
+    .hero-txt .big{
+        font-size: clamp(100px, 12.708333333333334vw, 244px);
+    }
+}
+
+/* border */
+
+.alkf_insight_detail_page{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.alkf_insight_detail_page .alkf_project_detail_banner:first-child{
+    border-bottom: 1px solid #000;
+}
+
+.alkf_insight_detail_page .alkf_project_detail_banner:last-child{
+    padding-bottom: 70px;
+}
