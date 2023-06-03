@@ -102,7 +102,6 @@ foreach($parts as $item) {
 		</div>
 	</div>
 </header>
-
 <div class="align-loader loaderJS"></div>
 <div class="cursor-follow">
 	<div class="cursor-view">
