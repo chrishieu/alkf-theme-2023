@@ -27,7 +27,6 @@ class PlaceholderBlock {
   // new PlaceholderBlock("eventsandblogs");
   new PlaceholderBlock("header");
   new PlaceholderBlock("footer");
-  new PlaceholderBlock("contact");
   new PlaceholderBlock("page");
   new PlaceholderBlock("insight-news");
   new PlaceholderBlock("insight-award");
