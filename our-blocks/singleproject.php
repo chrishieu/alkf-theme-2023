@@ -8,7 +8,12 @@
         <h1 class="title_h1 text">
           <?php the_title(); ?>
         </h1>
-        <div class="title_year text">© 2020</div>
+        <?php 
+        $terms = wp_get_post_terms( $post->ID, array( 'completion' ) );
+        ?>
+        <?php if(count($terms) > 0): ?>
+        <div class="title_year text">© <?php echo $terms[0]->name; ?></div>
+        <?php endif; ?>
       </div>
       <div class="alkf_project_detail_banner sh_775 reveal">
         <img class="text" src="<?php echo get_the_post_thumbnail_url($post, 'insightHero'); ?>" alt="ALKF banner" title="ALKF banner" />

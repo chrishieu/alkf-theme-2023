@@ -27,7 +27,6 @@ add_action('wp_before_admin_bar_render', 'mytheme_admin_bar_render');
 
 function project_files()
 {
-  // wp_enqueue_style('alkf_main_styles', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js');
   wp_enqueue_script('swiper', get_theme_file_uri('/www/js/swiper.min.js'));
   wp_enqueue_script('gsap', get_theme_file_uri('/www/js/gsap391.min.js'));
   wp_enqueue_script('global', get_theme_file_uri('/www/js/global-function.js'));
@@ -56,7 +55,14 @@ function project_features()
   add_image_size('insightHero', 1392, 577, true);
   
   add_theme_support('editor-styles');
-  add_editor_style(array('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i', 'www/css/style.css', 'www/admin.css', 'www/css/general.css'));
+  add_editor_style(array(
+    '/www/admin.css',
+    '/www/css/swiper.min.css',
+    '/www/asset/font/graphiklcg/style.css',
+    '/www/css/header/responsive.css',
+    '/www/css/footer/responsive.css',
+    '/www/css/custom.css'
+  ));
 }
 
 add_action('after_setup_theme', 'project_features');
@@ -103,31 +109,27 @@ function project_favicon(){
 
 add_action( 'wp_head', 'project_favicon');
 
-// function wp_nav_menu_no_ul()
-// {
-//     $options = array(
-//         'echo' => false,
-//         'container' => '',
-//         'menu' => 'side-menu',
-//         'fallback_cb'=> 'fall_back_menu'
-//     );
+// add_filter( 'allowed_block_types_all', 'project_allowed_block_types', 25, 2 );
 
-//     $menu = wp_nav_menu($options);
-//     echo preg_replace(array(
-//         '#^<ul[^>]*>#',
-//         '#</ul>$#',
-//         '#^<li[^>]*>#',
-//         '#</li>$#',
-//         '#^<li[^>]*>#',
-//         '#</li>$#'
-//     ), '', $menu);
-
+// function project_allowed_block_types( $allowed_blocks, $editor_context ) {
+//   $prefix_project_block = 'ourblocktheme/';
+// 	return array(
+// 		'core/paragraph',
+// 		'core/heading',
+//     $prefix_project_block."page",
+//     $prefix_project_block."insight-news",
+//     $prefix_project_block."insight-award",
+//     $prefix_project_block."insight-blog",
+//     $prefix_project_block."all-news",
+//     $prefix_project_block."all-award",
+//     $prefix_project_block."all-blog",
+//     $prefix_project_block."project",
+//     $prefix_project_block."career",
+//     $prefix_project_block."aboutus",
+//     $prefix_project_block."search",
+//     $prefix_project_block."selectedprojects",
+// 	); 
 // }
-
-// function fall_back_menu(){
-//     return;
-// }
-
 
 // Block theme functions
 include(get_stylesheet_directory() . '/functions/functions-block-theme.php');

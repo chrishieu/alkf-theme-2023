@@ -53,12 +53,8 @@ class JSXBlock {
     'line_curve' => get_theme_file_uri('/www/asset/image/line-curve.png'),
   ]);
 
-  new JSXBlock('people', true);
-  new JSXBlock('peopleimage', true, [
-    'fallbackimage' => get_theme_file_uri('/images/library-hero.jpg'),
-    'line_home14' => get_theme_file_uri('/www/asset/image/line-home14.png'), 
-    'counter' => 1
-  ]);
+  new JSXBlock('people', true, ['base_url' => get_theme_file_uri('/www/')]);
+  new JSXBlock('people-image', true);
 
   new JSXBlock('insightdetailbigimage', true, ['fallbackimage' => get_theme_file_uri('/www/asset/image/home-hero.jpg'),]);
   new JSXBlock('insightdetail2imageandtext', true, ['fallbackimage' => get_theme_file_uri('/www/asset/image/home-hero.jpg'),]);
