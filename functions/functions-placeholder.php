@@ -28,21 +28,12 @@ class PlaceholderBlock {
   new PlaceholderBlock("header");
   new PlaceholderBlock("footer");
   new PlaceholderBlock("page");
-  new PlaceholderBlock("insight-news");
-  new PlaceholderBlock("insight-award");
-  new PlaceholderBlock("insight-blog");
-  new PlaceholderBlock("all-news");
-  new PlaceholderBlock("all-award");
-  new PlaceholderBlock("all-blog");
   new PlaceholderBlock("project");
-  new PlaceholderBlock("singlenews");
-  new PlaceholderBlock("singleaward");
-  new PlaceholderBlock("singleblog");
-  new PlaceholderBlock("singleproject");
+  new PlaceholderBlock("singlepost");
   new PlaceholderBlock("career"); 
   new PlaceholderBlock("aboutus"); 
   new PlaceholderBlock("search"); 
   new PlaceholderBlock("taxonomy-project");
-  new PlaceholderBlock("selectedprojects");
+  new PlaceholderBlock("home-selected-projects");
   
   

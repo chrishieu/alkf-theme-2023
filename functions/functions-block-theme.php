@@ -47,24 +47,22 @@ class JSXBlock {
 
   new JSXBlock('home-award', true);
 
-  new JSXBlock('homevision', true, [
-    'line_home9' => get_theme_file_uri('/www/asset/image/line-home9.png'),
-    'line_home4' => get_theme_file_uri('/www/asset/image/line-home4.png'),
-    'line_curve' => get_theme_file_uri('/www/asset/image/line-curve.png'),
-  ]);
-
   new JSXBlock('people', true, ['base_url' => get_theme_file_uri('/www/')]);
   new JSXBlock('people-image', true);
 
-  new JSXBlock('insightdetailbigimage', true, ['fallbackimage' => get_theme_file_uri('/www/asset/image/home-hero.jpg'),]);
-  new JSXBlock('insightdetail2imageandtext', true, ['fallbackimage' => get_theme_file_uri('/www/asset/image/home-hero.jpg'),]);
-  new JSXBlock('insightdetailtitletext', true);
   new JSXBlock('herocareer', true, ['fallbackimage' => get_theme_file_uri('/www/asset/image/home-hero.jpg'),]);
   new JSXBlock('quotecareer', true, ['fallbackimage' => get_theme_file_uri('/www/asset/image/home-hero.jpg'),]);
   new JSXBlock('careerbigimage', true, ['fallbackimage' => get_theme_file_uri('/www/asset/image/home-hero.jpg'),]);
   new JSXBlock('quotecareer2', true);
   new JSXBlock('careerlistitem', true);
 
-  new JSXBlock("insight-slideshow", true);
+  new JSXBlock('insight-slideshow', true);
+  new JSXBlock('insight-swiper-post', true);
+  new JSXBlock('insight-grid-post', true);
 
-  new JSXBlock("home-insight", true);
+  new JSXBlock('insight--detail-big-image', true);
+  new JSXBlock('insight--detail-title-text', true);
+  new JSXBlock('insight--detail-2-image-and-text', true);
+
+  new JSXBlock('home-insight', true);
+  new JSXBlock('home-vision', true);

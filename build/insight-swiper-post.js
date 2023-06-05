@@ -32,16 +32,6 @@ module.exports = window["wp"]["components"];
 
 /***/ }),
 
-/***/ "@wordpress/data":
-/*!******************************!*\
-  !*** external ["wp","data"] ***!
-  \******************************/
-/***/ ((module) => {
-
-module.exports = window["wp"]["data"];
-
-/***/ }),
-
 /***/ "@wordpress/element":
 /*!*********************************!*\
   !*** external ["wp","element"] ***!
@@ -123,113 +113,71 @@ module.exports = window["wp"]["element"];
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!************************************!*\
-  !*** ./our-blocks/home-insight.js ***!
-  \************************************/
+/*!*******************************************!*\
+  !*** ./our-blocks/insight-swiper-post.js ***!
+  \*******************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
 
-
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)('ourblocktheme/home-insight', {
-  title: 'Home - Insight selected',
-  category: 'common',
+wp.blocks.registerBlockType("ourblocktheme/insight-swiper-post", {
+  title: "Insight - Swiper Posts",
   attributes: {
-    title: {
+    dropdownValue: {
       type: "string",
-      default: ""
-    },
-    text: {
-      type: "string",
-      default: ""
-    },
-    selectedPosts: {
-      type: 'array',
-      default: []
+      default: "option1"
     }
   },
-  edit: _ref => {
+  edit: function (_ref) {
     let {
       attributes,
       setAttributes
     } = _ref;
     const {
-      selectedPosts
+      dropdownValue
     } = attributes;
-    const allPosts = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_4__.useSelect)(select => {
-      // const postTypes = ['news', 'award', 'blog']; // Add the desired post types here
-      const postTypes = 'post'; // Add the desired post types here
-      return select('core').getEntityRecords('postType', postTypes, {
-        per_page: -1
-      });
-    }, []);
-    const onChangeSelect = newSelectedPosts => {
+    const onChangeDropdown = newValue => {
       setAttributes({
-        selectedPosts: newSelectedPosts
+        dropdownValue: newValue
       });
     };
-    const postDropdown = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.SelectControl, {
-      multiple: true,
-      label: "Select Insights",
-      value: selectedPosts,
-      options: allPosts ? allPosts.map(post => ({
-        value: post.id,
-        label: post.title.rendered
-      })) : [],
-      onChange: onChangeSelect,
-      style: {
-        height: "200px"
-      }
-    });
-    function handleTitleChange(x) {
-      setAttributes({
-        title: x
-      });
-    }
-    function handleTextChange(x) {
-      setAttributes({
-        text: x
-      });
-    }
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createElement)("section", {
-      class: "slider our_insights_home scrollTrigger"
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
-      class: "container"
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createElement)("h2", {
-      class: "title-h2 slider-title"
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-      tagName: "span",
-      className: "align-underline",
-      value: attributes.title,
-      onChange: handleTitleChange,
-      placeholder: "Title here"
-    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-      tagName: "div",
-      className: "slider-subtitle",
-      value: attributes.text,
-      onChange: handleTextChange,
-      placeholder: "Text here"
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createElement)("div", {
-      class: "swiper swiper-default"
-    }, postDropdown)));
+    const dropdownOptions = [{
+      value: "news",
+      label: "News"
+    }, {
+      value: "award",
+      label: "Award"
+    }, {
+      value: "blog",
+      label: "Blog"
+    }];
+    const inspectorControls = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+      title: "Block Settings"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+      label: "Insight Type",
+      value: dropdownValue,
+      options: dropdownOptions,
+      onChange: onChangeDropdown
+    }));
+    return [(0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createElement)("div", {
+      className: "our-placeholder-block"
+    }, "Insight Swiper Posts Placeholder"), inspectorControls];
   },
-  save: () => {
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.Content, null);
-  } // No output in the frontend
+  save: function () {
+    return null;
+  }
 });
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=home-insight.js.map
+//# sourceMappingURL=insight-swiper-post.js.map

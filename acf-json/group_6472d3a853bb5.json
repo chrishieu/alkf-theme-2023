@@ -58,21 +58,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "news"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "award"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "blog"
+                "value": "post"
             }
         ]
     ],
@@ -85,5 +71,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1685289139
+    "modified": 1685878512
 }

@@ -5,7 +5,7 @@ add_action('admin_menu', 'my_remove_admin_menus');
 function my_remove_admin_menus()
 {
   remove_menu_page('edit-comments.php');
-  remove_menu_page('edit.php');
+  // remove_menu_page('edit.php');
 }
 // Removes comments from post and pages
 add_action('init', 'remove_comment_support', 100);
@@ -22,8 +22,6 @@ function mytheme_admin_bar_render()
   $wp_admin_bar->remove_menu('comments');
 }
 add_action('wp_before_admin_bar_render', 'mytheme_admin_bar_render');
-
-// add_action('rest_api_init', 'university_custom_rest');
 
 function project_files()
 {
@@ -52,7 +50,7 @@ function project_features()
   add_image_size('projectPortrait', 684, 900, true);
   add_image_size('peopleImage', 218, 218, false);
 
-  add_image_size('insightHero', 1392, 577, true);
+  add_image_size('insightHero', 1392, 547, true);
   
   add_theme_support('editor-styles');
   add_editor_style(array(

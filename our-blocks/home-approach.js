@@ -4,8 +4,8 @@ import { createElement } from "@wordpress/element";
 import { SelectControl } from '@wordpress/components';
 import { useSelect } from '@wordpress/data';
 
-registerBlockType('ourblocktheme/home-insight', {
-    title: 'Home - Insight selected',
+registerBlockType('ourblocktheme/home-approach', {
+    title: 'Home - Approach',
     category: 'common',
     attributes: {
       title: { type: "string", default: "" },

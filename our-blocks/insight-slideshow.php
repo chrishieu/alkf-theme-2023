@@ -1,11 +1,19 @@
 <?php
 
-$post_type = !isset($attributes['dropdownValue']) ? 'news' : $attributes['dropdownValue'];
+$term = !isset($attributes['dropdownValue']) ? 'news' : $attributes['dropdownValue'];
+
 $post_list = get_posts(array(
   'posts_per_page' => 3,
-  'post_type' => $post_type,
+  'post_type' => 'post',
   'orderby' => 'published_date',
   'order' => 'DESC',
+  'tax_query' => array(
+    array(
+      'taxonomy' => 'insight-type',
+      'field' => 'slug',
+      'terms' => $term
+    )
+  )
 ));
 ?>
 
@@ -14,6 +22,9 @@ $post_list = get_posts(array(
   <div class="swiper-container text">
     <div class="swiper-wrapper insightSlider">
       <?php foreach($post_list as $item): ?>
+      <?php 
+        $slideshow_features_images = get_field('slideshow_features_images', $item); //['sizes']['insightHero']
+      ?>
       <div class="swiper-slide">								
         <div class="slider-item">
           <div class="alkf_insights_title">
@@ -23,7 +34,7 @@ $post_list = get_posts(array(
           <div class="swiper-date"><span class="date"><?php echo get_the_date('d/m/Y', $item);?></span></div>
           <div class="swiper-counter"></div>	
           <div class="insights_one_img insights_one_attr" titleh1="<?php echo $item->post_title; ?>" titleyear="<?php echo get_the_excerpt($item); ?>" datetime="<?php echo get_the_date('d/m/Y', $item);?>">
-            <img src="<?php echo get_field('slideshow_features_images', $item)['sizes']['insightHero']; ?>" alt="" />
+            <img src="<?php echo $slideshow_features_images['sizes']['insightHero']; ?>" alt="" />
           </div>
         </div>
       </div>

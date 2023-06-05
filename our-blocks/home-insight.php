@@ -16,7 +16,11 @@
             <div class="slider-item project-view">
               <a href="<?php echo get_permalink($item); ?>" class="slider-img">
                 <img src="<?php echo get_the_post_thumbnail_url($item, 'projectPortrait'); ?>" alt="ALKF banner" title="ALKF banner" />
-                <img src="<?php echo (isset($other_features_images)) ? $other_features_images['sizes']['projectPortrait'] : get_the_post_thumbnail_url($item, 'projectPortrait'); ?>" alt="ALKF banner" title="ALKF banner" />
+                <?php if(isset($other_features_images) && isset($other_features_images['sizes']) && isset($other_features_images['sizes']['projectPortrait'])): ?>
+                <img src="<?php echo $other_features_images['sizes']['projectPortrait']; ?>" alt="ALKF banner" title="ALKF banner" />
+                <?php else: ?>
+                <img src="<?php echo get_the_post_thumbnail_url($item, 'projectPortrait'); ?>" alt="ALKF banner" title="ALKF banner" />
+                <?php endif; ?>
               </a>
               <a href="<?php echo get_permalink($item); ?>" class="slider-content">
                 <div class="name"><?php echo $item->post_title; ?></div>
