@@ -70,6 +70,10 @@ function load_custom_wp_admin_style($hook) {
 }
 add_action( 'admin_head', 'load_custom_wp_admin_style' );
 
+add_action( 'admin_enqueue_scripts', function() {
+  wp_enqueue_script( 'handle', get_theme_file_uri('/www/admin.js'), array('jquery') );
+}, 20, 1 );
+
 function register_menu() {
   register_nav_menu('main-menu',__( 'Main Menu' ));
   register_nav_menu('additional-menu',__( 'Additional Menu' ));

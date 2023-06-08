@@ -1,3 +1,8 @@
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!*************************************!*\
+  !*** ./our-blocks/home-approach.js ***!
+  \*************************************/
 // import { registerBlockType } from "@wordpress/blocks";
 // import { RichText, InnerBlocks } from "@wordpress/block-editor";
 // import { createElement } from "@wordpress/element";
@@ -16,7 +21,7 @@
 //       },
 //     },
 //     edit: ({ attributes, setAttributes }) => {
-      
+
 //       let x = (
 //         <section class="slider our_insights_home scrollTrigger">
 //           <div class="container">
@@ -132,3 +137,6 @@
 //       return <InnerBlocks.Content />
 //     }, // No output in the frontend
 // });
+/******/ })()
+;
+//# sourceMappingURL=home-approach.js.map

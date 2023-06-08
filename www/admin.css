@@ -75,3 +75,7 @@
 .people-grid .block-editor-inner-blocks {
     width: 100%;
 } 
+
+.editor-styles-wrapper * {
+    cursor: pointer !important;
+}

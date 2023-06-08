@@ -50,11 +50,12 @@ class JSXBlock {
   new JSXBlock('people', true, ['base_url' => get_theme_file_uri('/www/')]);
   new JSXBlock('people-image', true);
 
-  new JSXBlock('herocareer', true, ['fallbackimage' => get_theme_file_uri('/www/asset/image/home-hero.jpg'),]);
-  new JSXBlock('quotecareer', true, ['fallbackimage' => get_theme_file_uri('/www/asset/image/home-hero.jpg'),]);
-  new JSXBlock('careerbigimage', true, ['fallbackimage' => get_theme_file_uri('/www/asset/image/home-hero.jpg'),]);
-  new JSXBlock('quotecareer2', true);
-  new JSXBlock('careerlistitem', true);
+  new JSXBlock('career-hero', true);
+  new JSXBlock('career-quote', true);
+  new JSXBlock('career-big-image', true);
+  new JSXBlock('career-list-item', true);
+  new JSXBlock('career-quote-2', true);
+  new JSXBlock('career-quote-3', true);
 
   new JSXBlock('insight-slideshow', true);
   new JSXBlock('insight-swiper-post', true);

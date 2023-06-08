@@ -30,10 +30,9 @@ class PlaceholderBlock {
   new PlaceholderBlock("page");
   new PlaceholderBlock("project");
   new PlaceholderBlock("singlepost");
-  new PlaceholderBlock("career"); 
   new PlaceholderBlock("aboutus"); 
   new PlaceholderBlock("search"); 
   new PlaceholderBlock("taxonomy-project");
   new PlaceholderBlock("home-selected-projects");
-  
+  new PlaceholderBlock("career-open-applications");
   
