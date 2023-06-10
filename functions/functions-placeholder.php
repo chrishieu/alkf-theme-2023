@@ -30,6 +30,7 @@ class PlaceholderBlock {
   new PlaceholderBlock("page");
   new PlaceholderBlock("project");
   new PlaceholderBlock("singlepost");
+  new PlaceholderBlock("singleproject");
   new PlaceholderBlock("aboutus"); 
   new PlaceholderBlock("search"); 
   new PlaceholderBlock("taxonomy-project");

@@ -71,6 +71,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="alkf_aboutUs_section alkf_aboutUs_sec_4 reveal">
 				<div class="alkf_aboutUs_people text">
 					<!-- s1 -->
@@ -336,21 +337,7 @@
 					</div>
 				</div>
 			</div>
-			<?php the_content(); ?>
+			
 		</div>
 	</div>
 </main>
-
-<script type="text/javascript" src="<?php echo get_theme_file_uri('/www/js/global/sliderHorizontal.js'); ?>" defer></script>
-<script type="text/javascript" src="<?php echo get_theme_file_uri('/www/js/global/header.js'); ?>" defer></script>
-<script type="text/javascript" src="<?php echo get_theme_file_uri('/www/js/global/hero.js'); ?>" defer></script>
-<script type="text/javascript" src="<?php echo get_theme_file_uri('/www/js/global/hover.js'); ?>" defer></script>
-<script type="text/javascript" src="<?php echo get_theme_file_uri('/www/js/global/loader.js'); ?>" defer></script>
-<script type="text/javascript" src="<?php echo get_theme_file_uri('/www/js/global/swiper.js'); ?>" defer></script>
-
-<script type="text/javascript" src="<?php echo get_theme_file_uri('/www/js/career/custom.js'); ?>" defer></script>
-<script type="text/javascript" src="<?php echo get_theme_file_uri('/www/js/career/init.js'); ?>" defer></script>
-
-<script type="text/javascript" src="<?php echo get_theme_file_uri('/www/js/initGlobal.js'); ?>" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
