@@ -1,4 +1,5 @@
 <?php
+$term = get_queried_object();
 $parent_terms = get_terms( array(
   'taxonomy'   => 'group',
   'hide_empty' => false,
@@ -10,7 +11,7 @@ $data = get_posts(array(
   'numberposts' => -1,
   'tax_query' => array(
     array(
-      'taxonomy' => 'group',
+      'taxonomy' => $term->taxonomy,
       'field' => 'term_id', 
       'terms' => get_queried_object_id(),
       'include_children' => true
@@ -28,7 +29,7 @@ $data = get_posts(array(
           <h1 class="text">We create
             <span class="align-underline active hover_mouse">
               place
-              <img class="line" src="./asset/image/line-home8.png" alt="">
+              <img class="line" src="<?php echo get_theme_file_uri('/www/asset/image/line-home8.png'); ?>" alt="">
             </span>,
             <br> not just buildings
           </h1>
@@ -84,7 +85,7 @@ $data = get_posts(array(
         <div class="alkf_project_right project_sub_desktop">
           <div class="project_menu_desk">
             <ul>
-              <li>All</li>
+              <li><a href="<?php echo 1; ?>">All</a></li>
               <?php 
               $comp_terms = get_terms( array(
                 'taxonomy'   => 'completion',
