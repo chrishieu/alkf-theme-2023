@@ -31,22 +31,22 @@ $attributes['imgURL'] = get_theme_file_uri('/www/asset/image/home-hero.jpg');
   <div class="vision-row text">
     <div class="col-4">
       <div class="vision-item">
-        <div class="number"><?php echo $attributes['txt1']; ?></div>
-        <div class="txt"><?php echo $attributes['num1']; ?></div>
+        <div class="number"><?php echo $attributes['num1']; ?></div>
+        <div class="txt"><?php echo $attributes['txt1']; ?></div>
         <img class="line" src="<?php echo get_theme_file_uri('/www/asset/image/line-curve.png'); ?>" alt="" />
       </div>
     </div>
     <div class="col-4">
       <div class="vision-item">
-        <div class="number"><?php echo $attributes['txt2']; ?></div>
-        <div class="txt"><?php echo $attributes['num2']; ?></div>
+        <div class="number"><?php echo $attributes['num2']; ?></div>
+        <div class="txt"><?php echo $attributes['txt2']; ?></div>
         <img class="line" src="<?php echo get_theme_file_uri('/www/asset/image/line-curve.png'); ?>" alt="" />
       </div>
     </div>
     <div class="col-4">
       <div class="vision-item">
-        <div class="number"><?php echo $attributes['txt3']; ?></div>
-        <div class="txt"><?php echo $attributes['num3']; ?></div>
+        <div class="number"><?php echo $attributes['num3']; ?></div>
+        <div class="txt"><?php echo $attributes['txt3']; ?></div>
         <img class="line" src="<?php echo get_theme_file_uri('/www/asset/image/line-curve.png'); ?>" alt="" />
       </div>
     </div>
