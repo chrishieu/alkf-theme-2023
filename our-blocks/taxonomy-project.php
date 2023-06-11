@@ -2,7 +2,7 @@
 $term = get_queried_object();
 $parent_terms = get_terms( array(
   'taxonomy'   => 'group',
-  'hide_empty' => false,
+  'hide_empty' => true,
   'parent' => 0 
 ) );
 
@@ -65,7 +65,7 @@ $data = get_posts(array(
         <?php 
         $children_terms = get_terms( array(
           'taxonomy'   => 'group',
-          'hide_empty' => false,
+          'hide_empty' => true,
           'parent' => $pitem->term_id 
         ) );
         ?>
@@ -89,7 +89,7 @@ $data = get_posts(array(
               <?php 
               $comp_terms = get_terms( array(
                 'taxonomy'   => 'completion',
-                'hide_empty' => false
+                'hide_empty' => true
               ) );
               ?>
               <?php foreach($comp_terms as $cterm): ?>

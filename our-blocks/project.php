@@ -29,7 +29,7 @@ $non_tst = array_chunk($non_feature_list, 2);
 
 $parent_terms = get_terms( array(
   'taxonomy'   => 'group',
-  'hide_empty' => false,
+  'hide_empty' => true,
   'parent' => 0 
 ) );
 
@@ -79,7 +79,7 @@ $parent_terms = get_terms( array(
         <?php 
         $children_terms = get_terms( array(
           'taxonomy'   => 'group',
-          'hide_empty' => false,
+          'hide_empty' => true,
           'parent' => $pitem->term_id 
         ) );
         ?>
@@ -103,7 +103,7 @@ $parent_terms = get_terms( array(
               <?php 
               $comp_terms = get_terms( array(
                 'taxonomy'   => 'completion',
-                'hide_empty' => false
+                'hide_empty' => true
               ) );
               ?>
               <?php foreach($comp_terms as $cterm): ?>
