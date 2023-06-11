@@ -1,11 +1,53 @@
+// window.addEventListener('load', () => {
+// 	try {
+// 		header();
+// 	} catch {
+// 		console.error('Header scroll is not working!');
+// 	}
+// 	try {
+// 		hero();
+// 	} catch {
+// 		console.error('Hero is not working!');
+// 	}
+// 	try {
+// 		scrollTrigger();
+// 	} catch {
+// 		console.error('Scroll trigger is not working!');
+// 	}
+// 	try {
+// 		hover();
+// 	} catch {
+// 		console.error('Hover is not working!');
+// 	}
+// 	try {
+// 		swiper();
+// 	} catch {
+// 		console.error('Slide not work');
+// 	}
+// 	try {
+// 		loader();
+// 	} catch {
+// 		console.error('Loader is not working!');
+// 	}
+// 	try{
+// 		reveal();
+// 	}catch{
+// 		console.error('Reavel not working');
+// 	}
+
+//     window.addEventListener("scroll", reveal);
+// })
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
-	setTimeout(function () {
+    setTimeout(function () {
 		try {
-			removeClassOnClick('.close_jobdesc', 'active_pop', '.job_desc');
+			removeClassOnClick('.close_jobdesc', 'active_pop','.job_desc');
 
-			removeClassOnClick('.close_jobdesc', 'disabled_scroll', 'html');
+			removeClassOnClick('.close_jobdesc', 'disabled_scroll','html');
 
-			removeClassOnClick('.close_jobdesc', 'disabled_scroll', 'body');
+			removeClassOnClick('.close_jobdesc', 'disabled_scroll','body');
 
 		} catch {
 			console.error('removeClassOnClick is not working!');
@@ -61,21 +103,23 @@ document.addEventListener("DOMContentLoaded", function () {
 			console.error('scrollTrigger is not working!');
 		}
 		try {
-			hover();
-		} catch {
-			console.error('scrollTrigger is not working!');
-		}
-		try {
 			window.addEventListener("scroll", reveal);
 		} catch {
 			console.error('reveal is not working!');
 		}
 		try {
 			makeSliderDraggable('.slider1', 'horizontal', 1);
-			makeSliderDraggable('.slider2', 'horizontal', 2);
-			makeSliderDraggable('.slider3', 'horizontal', 3);
+			makeSliderDraggable('.slider2', 'horizontal', 2);  
+			makeSliderDraggable('.slider3', 'horizontal', 3);  
 		} catch {
 			console.error('makeSliderDraggable is not working!');
 		}
-	}, 500)
+	},500)
 });
+
+
+
+
+    
+
+   
