@@ -106,7 +106,7 @@ function custom_title($title_parts) {
 add_filter( 'document_title_parts', 'custom_title' );
 
 function project_favicon(){
-    echo "<link rel='shortcut icon' href='" . get_stylesheet_directory_uri() . "/www/asset/favicon/fav.png' />" . "\n";
+    echo "<link rel='shortcut icon' href='" . get_stylesheet_directory_uri() . "/www//fav.png' />" . "\n";
 }
 
 add_action( 'wp_head', 'project_favicon');
@@ -132,6 +132,13 @@ add_action( 'wp_head', 'project_favicon');
 //     $prefix_project_block."selectedprojects",
 // 	); 
 // }
+
+function applyUnderlineStyle ($txt) {
+  $base = get_theme_file_uri('/www');
+  $string = str_replace("<u>", '<span class="align-underline">', $txt);
+  $string2 = str_replace("</u>", '<img class="line" src="'.$base.'/asset/image/line-home4.png" alt="" /></span>', $string);
+  return $string2;
+}
 
 // Block theme functions
 include(get_stylesheet_directory() . '/functions/functions-block-theme.php');

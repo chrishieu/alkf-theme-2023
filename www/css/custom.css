@@ -2341,6 +2341,7 @@ body {
     padding: 0 20px;
     box-sizing: border-box;
 }
+
 header .header-menu .container {
     padding: 0;
 }
@@ -2454,12 +2455,12 @@ header .header-menu .container {
         font-size: clamp(186px, 9.6875vw, 186px);
     }
 
-    .vision-subtitle{
-        font-size: clamp(64px,3.3333333333vw, 64px);
+    .vision-subtitle {
+        font-size: clamp(64px, 3.3333333333vw, 64px);
     }
 
     .people-subtitle {
-        font-size: clamp(60px,  3.125vw, 60px );
+        font-size: clamp(60px, 3.125vw, 60px);
     }
 
     .our_insights_home .slider-subtitle {
@@ -4204,8 +4205,7 @@ label.label-focus {
         font-size: clamp(14px, 0.8333333333333334vw, 16px);
     }
 
-    .alkf_mobile_text_4 .alkf_career_about_contents .alkf_career_main_contents p,
-    .alkf_mobile_text_2 .alkf_career_about_contents .alkf_career_main_contents p {
+    .alkf_mobile_text_4 .alkf_career_about_contents .alkf_career_main_contents p{
         font-size: clamp(16px, 9vw, 40px);
         line-height: clamp(12px, 10vw, 40px);
         margin-top: 60px;
@@ -4599,7 +4599,8 @@ label.label-focus {
 
     .job_container ul li {
         list-style: circle;
-        font-size: clamp(16px, 5vw, 21px);
+        font-size: clamp(12px, 5vw, 15px);
+        line-height: 20px;
     }
 
     .job_desc_right {
@@ -4833,7 +4834,7 @@ label.label-focus {
         font-weight: 400;
         font-size: clamp(26px, 3.3333333333333335vw, 64px);
         line-height: 120%;
-        color: #000000;
+        color: #FFF;
     }
 
     .alkf_career_about_contents .alkf_career_main_strategies {
@@ -4842,7 +4843,7 @@ label.label-focus {
         font-weight: 400;
         font-size: clamp(26px, 2.0833333333333335vw, 40px);
         line-height: 120%;
-        color: #000000;
+        color: #FFF;
     }
 
     .alkf_career_about_contents .alkf_career_people_contents {
@@ -4851,7 +4852,7 @@ label.label-focus {
         font-weight: 400;
         font-size: clamp(26px, 2.0833333333333335vw, 40px);
         line-height: 120%;
-        color: #000000;
+        color: #FFF;
     }
 
     .alkf_career_about_contents .alkf_career_name {
@@ -4860,7 +4861,7 @@ label.label-focus {
         font-weight: 400;
         font-size: clamp(16px, 1.875vw, 36px);
         line-height: 120%;
-        color: #000000;
+        color: #FFF;
     }
 
     .alkf_career_about_img img {
@@ -4895,7 +4896,7 @@ label.label-focus {
         font-weight: 400;
         font-size: clamp(16px, 1.0416666666666667vw, 24px);
         line-height: 120%;
-        color: #000000;
+        color: #FFF;
         padding-top: 0.625vw;
         position: relative;
     }
@@ -4979,8 +4980,12 @@ label.label-focus {
         align-items: center;
         vertical-align: middle;
         max-height: 170px;
-        padding: 70px 0;
+        padding: 48px 0;
         border-top: 1px solid #000000
+    }
+
+    .application_apply:last-child .application_position {
+        margin-bottom: 256px;
     }
 
     .application_title {
@@ -5051,7 +5056,8 @@ label.label-focus {
     }
 
     .job_container h5 {
-        margin-bottom: 20px
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     .job_container ul {
@@ -5063,8 +5069,8 @@ label.label-focus {
 
     .job_container ul li {
         list-style: circle;
-        font-size: clamp(12px, 5vw, 12px);
-        line-height: 14px;
+        font-size: clamp(12px, 5vw, 15px);
+        line-height: 20px;
     }
 
     .job_container .desc_res.desc_require {
@@ -5221,8 +5227,27 @@ label.label-focus {
 }
 
 @media (min-width: 200px) {
+    .about_us_content p,
+    .about_us_content span,
+    .alkf_title span,
+    .alkf_aboutUs_subtitle span,
+    .alkf_aboutUs_section p,
+    .alkf_role.text p,
+    .alkf_career_section .vision-item .number,
+    .alkf_career_section .vision-item .txt{
+        color:#FFF
+    }
     .alkf_img {
         position: relative;
+    }
+    .about_us_content .alkf_career_strategies .strategies_des:after{
+        background:#FFF !important;
+    }
+    .about_us_content .awards_position:not(:first-child),
+    .about_us_content .alkf_career_section .vision-row,
+    .about_us_content .border_bottom,
+    .about_us_content .alkf_people_s7 {
+        border-bottom:1px solid #FFF !important
     }
 
     .about_name_alkf:hover {
@@ -5412,7 +5437,7 @@ label.label-focus {
     .alkf_grid_1_1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+        gap: 12px;
     }
 
     .alkf_grid_1_2 {
@@ -5439,7 +5464,7 @@ label.label-focus {
         font-family: var(--font-family);
         font-style: normal;
         font-weight: 400;
-        font-size: clamp(16px, 2.5vw, 48px);
+        font-size: clamp(13px, 2.5vw, 48px);
         line-height: 1;
         color: #000000;
     }
@@ -5512,6 +5537,48 @@ label.label-focus {
     .alkf_aboutUs_sec_1 {
         max-height: 100vh;
         overflow: hidden;
+        position: fixed;
+        top: 100px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+    }
+
+    .about_us_content{
+        position: relative;
+        z-index: 999;
+        display:block;
+        margin-top:35em
+    }
+
+    .about_us_content.active+.background_overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 99;
+        background: #000;
+        opacity: 0;
+    }
+    .is_about_us_page p,
+    .is_about_us_page a,
+    .is_about_us_page,
+    .is_about_us_page span{
+        color:#FFF !important
+    }
+    .is_about_us_page .content::after,
+    .is_about_us_page .content::before{
+        background:#FFF;
+    }
+    .is_about_us_page .footer-bottom{
+        border-bottom:1px solid #FFF
+    }
+    .is_about_us_page{
+        z-index: 999999;
     }
 
 }
@@ -5658,17 +5725,8 @@ label.label-focus {
         grid-template-columns: 1fr;
     }
 
-    .alkf_people_50.alkf_grid_1_1 .alkf_img:nth-child(2) {
-        /* margin-top: -28px; */
-    }
-
     .alkf_people_50.alkf_grid_1_2 .alkf_role:nth-child(2) {
         padding-top: 27px;
-    }
-
-    .alkf_people_s3 .alkf_people_50.alkf_grid_1_1 .alkf_img:nth-child(2),
-    .alkf_people_s4 .alkf_people_50.alkf_grid_1_1 .alkf_img:nth-child(2) {
-        /* margin-top: -84px; */
     }
 
     .alkf_aboutUs_sec_5 {
@@ -5688,15 +5746,10 @@ label.label-focus {
         bottom: 50%;
     }
 
-    .alkf_aboutUs_sec_2 {
-        padding-bottom: 64px;
-    }
-
     .alkf_aboutUs_section.alkf_aboutUs_sec_4 .alkf_aboutUs_people {
         border-bottom: none;
     }
 }
-
 
 /* * */
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -5841,10 +5894,6 @@ label.label-focus {
         display: block;
     }
 
-    .alkf_aboutUs_our_awards {
-        /* border-top: none; */
-    }
-
     .alkf_career_about_img .mobile_career_founder {
         margin-bottom: 0;
         width: 100%;
@@ -5896,7 +5945,6 @@ label.label-focus {
     }
 
     .alkf_mobile_text_4 .alkf_career_about_contents .alkf_career_main_contents p {
-        /* font-size: clamp(12px, 2vw, 36px); */
         line-height: 120%;
         margin-top: 0;
     }
@@ -5999,7 +6047,7 @@ label.label-focus {
     }
 
     .job_container ul li {
-        font-size: clamp(12px, 1.25vw, 22px);
+        font-size: clamp(12px, 5vw, 15px);
     }
 
     .job_container h4 {
@@ -6444,22 +6492,64 @@ label.label-focus {
         width: 40px;
         height: 100%;
     }
-    .alkf_news_page .alkf_news_page_item .alkf_insights_title{
+
+    .alkf_news_page .alkf_news_page_item .alkf_insights_title {
         margin: 0 0 30px 0;
+    }
+
+    .application_position {
+        padding: 48px 0;
+    }
+
+    .application_apply:last-child .application_position {
+        margin-bottom: 256px;
+    }
+
+    .alkf_career_section.alkf_career_sec_7 .text.pd_top277 {
+        padding-top: 10.833333333333334vw;
+    }
+
+    .alkf_career_section.alkf_career_sec_9 .text.alkf_application_content {
+        padding-top: 10.15625vw;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .alkf_career_section.alkf_career_sec_7 .text.pd_top277 {
+        padding-top: 10.833333333333334vw;
+    }
+
+    .alkf_career_section.alkf_career_sec_9 .text.alkf_application_content {
+        padding-top: 100px;
+    }
+
+    .alkf_career_sec_9 .application_title span {
+        font-size: clamp(24px, 11vw, 40px);
     }
 }
 
-@media only screen and (min-width: 200px){
-    .alkf_project_completion{
+@media only screen and (min-width: 200px) {
+    .alkf_project_completion {
         height: auto;
     }
+
+    .mb_career_0 {
+        margin-bottom: 0;
+    }
+
+    .alkf_project_career .custom_pd_banner {
+        padding: 7.03125vw 0;
+        margin-bottom: 0;
+    }
+
 }
-    
-@media (min-width: 768px){    
-    .alkf_project_completion{
+
+@media (min-width: 768px) {
+    .alkf_project_completion {
         height: 143px;
     }
-    
+
     .alkf_project_aboutUs,
     .alkf_project_career,
     .form_container,
@@ -6472,18 +6562,18 @@ label.label-focus {
         padding-top: 22px;
     }
 
-    .slider.section-pri .swiper-slide, 
-    .slider.our_insights_home .swiper-slide{
+    .slider.section-pri .swiper-slide,
+    .slider.our_insights_home .swiper-slide {
         width: 33.3333333333% !important;
     }
-    
+
     .slider.our_insights_home .swiper-wrapper {
-        transform: none!important;
+        transform: none !important;
     }
-    
+
 }
-    
- @media (min-width: 1201px){
+
+@media (min-width: 1201px) {
 
     .alkf_project_aboutUs,
     .alkf_project_career,
@@ -6493,10 +6583,794 @@ label.label-focus {
     .alkf_news_page,
     .alkf_project_build_page,
     .alkf_project_detail_page,
-    .alkf_search_page{
+    .alkf_search_page {
         padding-top: 71px;
     }
-    .alkf_project_header .alkf_project_right ul li{
+
+    .alkf_project_header .alkf_project_right ul li {
         font-size: clamp(14px, 1.25vw, 24px);
+    }
+}
+
+/* popup css project details 2023/06/15 */
+:root {
+    --swiper-slider-height-img: 600px;
+}
+
+.popup_image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.apply_pop {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.btn-plus-pop {
+    position: absolute;
+    background-image: url("../asset/image/icon-plus-circle.png");
+    width: 39px;
+    height: 39px;
+    right: 0;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.pop_slider_project {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.pop_slider_project:before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: "";
+    background: #000000;
+    opacity: .97;
+}
+
+.close_popSlider {
+    z-index: 99;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ffffff;
+    border-radius: 100%;
+    top: 0;
+    right: 0;
+}
+
+.close_popSlider img {
+    padding: 8px;
+}
+
+/* hhdhdh */
+.alkf_popup_swiper {
+    max-width: 1440px;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    height: var(--swiper-slider-height-img);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pop_slider_project .container {
+    display: block;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 100%;
+}
+
+.pop_slider_project .swiper {
+    height: var(--swiper-slider-height-img);
+}
+
+.pop_slider_project .swiper .swiper-wrapper+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    top: -40px;
+    z-index: 5;
+}
+
+.pop_slider_project .swiper .swiper-wrapper+.container .swiper-button-prev,
+.pop_slider_project .swiper .swiper-wrapper+.container .swiper-button-next {
+    height: 16px;
+    top: 0px;
+    margin-top: 0px;
+}
+
+.pop_slider_project .swiper .swiper-wrapper+.container .swiper-button-prev::after,
+.pop_slider_project .swiper .swiper-wrapper+.container .swiper-button-next::after {
+    font-size: 16px;
+}
+
+.pop_slider_project .swiper .swiper-wrapper+.container .swiper-button-prev,
+.pop_slider_project .swiper .swiper-wrapper+.container .swiper-button-next,
+.pop_slider_project .swiper .swiper-wrapper+.container .swiper-pagination {
+    position: relative;
+    left: unset;
+    right: unset;
+}
+
+.pop_slider_project .swiper .swiper-wrapper+.container .swiper-pagination {
+    max-width: 200px;
+}
+
+.pop_slider_project .swiper .swiper-pagination-progressbar {
+    background: transparent !important;
+}
+
+.pop_slider_project .swiper .swiper-pagination-progressbar-fill {
+    background: transparent !important;
+}
+
+.pop_slider_project .swiper .swiper-pagination-progressbar-fill::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+    display: block;
+    margin-right: -2px;
+    position: absolute;
+    right: 50%;
+    top: -1px;
+    transform: translate3d(0px, 0px, 0px) scaleX(3) scaleY(1);
+    transition: all 0.32s ease-in-out;
+}
+
+.pop_slider_project .swiper .swiper-pagination-progressbar-fill[style="transform: translate3d(0px, 0px, 0px) scaleX(0.666667) scaleY(1); transition-duration: 600ms;"]::after,
+.pop_slider_project .swiper .swiper-pagination-progressbar-fill[style="transform: translate3d(0px, 0px, 0px) scaleX(0.6666666666666666) scaleY(1); transition-duration: 600ms;"]::after {
+    transform: translate3d(0px, 0px, 0px) scaleX(1.5) scaleY(1);
+    right: 24%;
+    margin-right: -1px;
+}
+
+.pop_slider_project .swiper .swiper-pagination-progressbar-fill[style="transform: translate3d(0px, 0px, 0px) scaleX(1) scaleY(1); transition-duration: 600ms;"]::after {
+    transform: translate3d(0px, 0px, 0px) scaleX(1) scaleY(1);
+    right: 16%;
+}
+
+.pop_slider_project .swiper .swiper-pagination-progressbar {
+    display: flex;
+}
+
+.pop_slider_project .swiper .bullet-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.pop_slider_project .swiper .bullet-circle::before {
+    content: "";
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+}
+
+.pop_slider_project .swiper-slide {
+    overflow: hidden;
+    position: relative;
+}
+
+.pop_slider_project .swiper-slide .project_img_pop {
+    display: block;
+    object-fit: cover;
+    height: var(--swiper-slider-height-img);
+    position: relative;
+    width: 66%;
+    z-index: 1;
+}
+
+.pop_slider_project .swiper-slide::before {
+    content: "";
+    /* background-image: linear-gradient(65deg, #06164b 20%, #051a69 80%); */
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: 65%;
+    width: 70%;
+    top: 0px;
+    /* transform: skew(-20deg); */
+    z-index: 2;
+}
+
+.pop_slider_project .swiper-slide::after {
+    content: "";
+    /* background-image: linear-gradient(
+      65deg,
+      rgba(6, 22, 75, 0.5) 20%,
+      rgba(5, 26, 105, 0.5) 80%
+    ); */
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right: 35%;
+    width: 0px;
+    transform: skew(-20deg);
+    transition: width 0.32s ease-in-out;
+    z-index: 3;
+}
+
+.pop_slider_project .swiper-slide.swiper-slide-active::after {
+    width: 100px;
+}
+
+.pop_slider_project .swiper-slide .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    height: 100%;
+    color: #fff;
+}
+
+.pop_slider_project .swiper-slide .slide-content .slide-content-inner {
+    text-align: right;
+}
+
+.pop_slider_project .right .swiper-counter {
+    font-size: 40px;
+    position: absolute;
+    bottom: 40px;
+    left: 70%;
+    padding-left: 24px;
+}
+
+.pop_slider_project .right .swiper-des {
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 70%;
+    line-height: 1;
+    padding-left: 24px;
+}
+
+.pop_slider_project .swiper-button-prev,
+.pop_slider_project .swiper-button-next {
+    top: auto;
+    bottom: 0;
+    scale: .35;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border: 4px solid #ffffff;
+    border-radius: 100%;
+}
+
+.pop_slider_project .swiper-button-next:before,
+.pop_slider_project .swiper-button-prev:before {
+    position: absolute;
+    content: "";
+    background: #ffffff;
+    width: 44px;
+    height: 4px;
+    top: calc(50% - 3px);
+}
+.pop_slider_project .swiper-button-next:after {
+    position: absolute;
+    padding: 0;
+    right: 10px;
+}
+.pop_slider_project .swiper-button-prev:after {
+    position: absolute;
+    padding: 0;
+    left: 10px;
+}
+.pop_slider_project .swiper-button-prev {
+    left: auto;
+    right: 55px;
+}
+
+.pop_slider_project .swiper-button-disabled {
+    opacity: 1 !important;
+}
+
+.alfk_project_detail_gid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+}
+
+.alkf_project_detail_page .alkf_project_detail_sc .content p,
+.alkf_project_detail_page .alfk_box_bot p,
+.alkf_project_detail_page .alfk_box_top p {
+    font-size: clamp(16px, 1.0416666666666667vw, 20px);
+    line-height: 120%;
+}
+
+.alkf_project_detail_page .prd_sc13 img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.alkf_project_detail_page .prd_sc2 {
+    margin-bottom: 96px;
+}
+
+.alkf_project_detail_page .prd_sc3 {
+    margin-bottom: 96px;
+}
+
+.alkf_project_detail_page .prd_sc4 {
+    margin-bottom: 60px;
+}
+
+.alkf_project_detail_page .prd_sc5 {
+    margin-bottom: 60px;
+}
+
+.alkf_project_detail_page .prd_sc6 {
+    margin-bottom: 25px;
+}
+
+.alkf_project_detail_page .prd_sc7 {
+    margin-bottom: 96px;
+}
+
+.alkf_project_detail_page .prd_sc8 {
+    margin-bottom: 96px;
+}
+
+.alkf_project_detail_page .prd_sc9 {
+    margin-bottom: 96px;
+    margin-top: 0;
+}
+
+.alkf_project_detail_page .prd_sc10 {
+    margin-bottom: 25px;
+}
+
+.alkf_project_detail_page .prd_sc11 {
+    margin-bottom: 25px;
+}
+
+.alkf_project_detail_page .prd_sc12 {
+    margin-bottom: 96px;
+}
+
+.alkf_project_detail_page .prd_sc13 {
+    margin-bottom: 25px;
+}
+
+.alkf_project_detail_page .prd_sc14 {
+    margin-bottom: 25px;
+}
+
+.alkf_project_detail_page .prd_sc15 {
+    margin-bottom: 200px;
+}
+
+
+/* popup menu */
+.close_popMenuWork {
+    z-index: 99;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ffffff;
+    border-radius: 100%;
+    top: 145px;
+    right: 84px;
+}
+
+.close_popMenuWork img {
+    padding: 8px;
+}
+.popup_menu_work{
+    width: 100%;
+    height: 0;
+    background: url(../asset/image/bg-popup-menu-work.jpg) no-repeat center center;
+}
+.popup_menu_work.active_pop{
+    height: 100vh;
+}
+.popup_menu_work .full_showSection .header-menu{
+    background-color: transparent;
+}
+
+.popup_menu_work .full_showSection .headerMenuPopJS.menu-open .header-menu{
+    background-color: #000000;
+
+}
+
+.header-btn a:hover{
+    color: #e23426;
+}
+
+.popup_menu_work .header{
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background-color: transparent; 
+}
+.popup_menu_work .header:after{
+    position: absolute;
+    content: "";
+    background: #ffffff;
+    width: 1752px;
+    height: 2px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    z-index: -1;
+}
+
+.popup_menu_work .header-search-icon img{
+    -webkit-filter: invert(100%); 
+    -moz-filter: invert(100%); 
+    -ms-filter: invert(100%); 
+    -o-filter: invert(100%); 
+    filter: invert(100%);
+}
+.popup_menu_work .header-lang .lang-item{
+    color: #000000;
+}
+.popup_menu_work .header-lang .lang-item:hover{
+    color: #ffffff;
+}
+.popup_menu_work  .content_menu_works{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 217px;
+    margin-top: 160px;
+    padding: 0 84px;
+}
+.content_menu_works li{
+    font-size: clamp(1.25vw, 1.875vw, 36px);
+    line-height: 1;
+    margin-bottom: 31px;
+    font-family: 'Graphik LCG';
+}
+body.no-scroll .popup_menu_work .close_popMenuWork{
+    opacity: 0;
+}
+body .popup_menu_work .close_popMenuWork{
+    opacity: 1;
+}
+/* .alkf_aboutUs_sec_2 */
+.alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents{
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    gap: 24px;
+}
+.alkf_aboutUs_sec_2 {
+    margin-bottom: 111px;
+}
+.alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_text{
+    position: relative;
+}
+
+.alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_img{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_text .text_top{
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(24px, 3.3333333333333335vw, 64px);
+    line-height: 1;
+    color: #FFF;
+    font-family: var(--font-family);
+}
+.alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_text .text_bot{
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(16px, 1.0416666666666667vw,20px);
+    line-height: 120%;
+    color: #FFF;
+    font-family: var(--font-family);
+    position: absolute;
+    bottom: 0;
+}
+
+.aboutUs_text_atMob,
+.alkf_block_slider_about
+ {
+    display: none;
+}
+
+.alkf_project_aboutUs .hide_on_desktop{
+    display: none;
+}
+@media (min-width: 1201px) {
+    .alkf_project_detail_page .sh_797 {
+        height: 797px;
+    }
+
+    .alkf_project_detail_page .popup_image .sh_797 {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .alkf_project_aboutUs .hide_on_mobile{
+        display: block;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .alfk_project_detail_gid .sh_797 {
+        height: auto;
+    }
+
+    .apply_pop {
+        right: 0px;
+        top: 5px;
+        scale: .8;
+    }
+    .pop_slider_project .swiper-counter{
+        display: block;
+    }
+
+    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents{
+        gap: 10px;
+    }
+
+    .about_us_content{
+        margin-top: 70em;
+    }
+    
+    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents,
+    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_img{
+        gap: 12px;
+    }
+
+    .hide_on_mobile{
+        display: block;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .pop_slider_project .swiper-counter{
+        display: block;
+    }
+    .alfk_project_detail_gid {
+        flex-wrap: wrap;
+    }
+
+    .alfk_project_detail_gid .sh_797 {
+        height: auto;
+    }
+
+    .apply_pop {
+        right: 0px;
+        top: 5px;
+        scale: .8;
+    }
+
+    .alkf_project_detail_page .alfk_project_detail_content {
+        gap: 24px;
+    }
+
+    .alkf_project_detail_page .prd_sc2, 
+    .alkf_project_detail_page .prd_sc3,
+    .alkf_project_detail_page .prd_sc5,
+    .alkf_project_detail_page .prd_sc7,
+    .alkf_project_detail_page .prd_sc8,
+    .alkf_project_detail_page .prd_sc9,
+    .alkf_project_detail_page .prd_sc12 {
+        margin-bottom: 60px;
+    }
+
+    .alkf_project_detail_page .prd_sc15 {
+        margin-bottom: 200px;
+    }
+
+    .pop_slider_project .swiper-slide .project_img_pop{
+        height: 480px;
+        width: 100%;
+    }
+    .pop_slider_project .close_popSlider {
+        top: 10px;
+        right: 10px;
+    }
+
+    .pop_slider_project .swiper-button-next {
+        right: 30px;
+    }
+    .pop_slider_project .right .swiper-counter,
+    .pop_slider_project .right .swiper-des {
+        left: 0;
+    }
+
+    .alkf_people.alkf_grid_1_1 {
+        padding-top: 12px!important;
+    }
+
+    /* .alkf_grid_1_1 .alkf_img:last-child{
+        margin-top: -50px;
+    } */
+
+    .pop_slider_project .swiper-button-prev {
+        right: 75px;
+    }
+
+    .alkf_aboutUs_sec_1{
+        max-height: auto;
+        overflow: initial;
+        position: relative;
+    }
+
+    .aboutUs_text_atMob {
+        display: block;
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 26px;
+        color: #000000;
+        padding-bottom: 38px;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents{
+        grid-template-columns: 1fr;
+    }
+
+    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_text .text_bot{
+        position: relative;
+        margin-top: 17px;
+    }
+
+    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_img {
+        /* display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        gap: 12px; */
+        display: none;
+    }
+
+    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_img .img_st,
+    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_img .img_nd,
+    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_img .img_rd {
+        height: 307px;
+        width: 235px;
+    }
+    .slider4{
+        width: 100%;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .alkf_block_slider_about{
+        display: block;
+    }
+
+    .alkf_aboutUs_sec_2{
+        margin-bottom: 50px;
+    }
+
+    .alkf_block_slider_about .alkf_insights_slider .item_small img{
+        aspect-ratio: 1 / 1.35;
+    }
+
+    .alkf_project_aboutUs .hide_on_desktop{
+        display: block;
+    }
+
+    .alkf_project_aboutUs .hide_on_mobile{
+        display: none;
+    }
+
+    .founder_mob{
+       padding-bottom: 43px;
+    }
+
+    .founder_mob .dl_grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        justify-content: end;
+        align-items: end;
+    }
+    .founder_mob .dl_grid:last-child{
+        margin-top: 16px;
+    }
+    .founder_mob .alkf_career_name {
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: #000000;
+    }
+    .alkf_mobile_text_2.alkf_career_section.alkf_career_sec_2 {
+        margin-bottom: 20px;
+    }
+
+    .alkf_mobile_text_4 .strategies_des p,
+    .alkf_mobile_text_4 .alkf_career_about_contents .alkf_career_main_contents p,
+    .alkf_mobile_text_5 .alkf_career_main_contents p,
+    .alkf_mobile_text_5 .strategies_des p,
+    .alkf_mobile_text_5 .alkf_career_about_contents .alkf_career_name p {
+        font-size: 16px !important;
+        line-height: 20px !important;
+    }
+
+    .alkf_mobile_text_4 .alkf_career_about_contents .alkf_career_name p{
+        font-size: 14px !important;
+       line-height: 14px !important;
+    }
+
+
+    .alkf_mobile_text_4 .alkf_career_about_contents .alkf_career_main_contents.alkf_career_main_strategies p {
+        margin-top: 0;
+    }
+
+    .alkf_people_s1 .alkf_people_50 .alkf_img:last-child, 
+    .alkf_people_s2 .alkf_people_50 .alkf_img:last-child {
+        margin-top: -50px;
+    }
+
+    .alkf_people_s3 .alkf_people_50 .alkf_img:last-child, 
+    .alkf_people_s4 .alkf_people_50 .alkf_img:last-child {
+        margin-top: -96px;
+    }
+
+    .alkf_people_s5 .alkf_people_50 .alkf_img:last-child,
+    .alkf_people_s6 .alkf_people_50 .alkf_img:last-child, 
+    .alkf_people_s7 .alkf_people_50 .alkf_img:last-child {
+        margin-top: 0;
+    }
+    .alkf_aboutUs_people .alkf_role {
+        padding-bottom: 8px;
+    }
+    .alkf_people_s1 .alkf_role,
+    .alkf_people_s5 .alkf_role,
+    .alkf_people_s6 .alkf_role {
+        max-width: 90px!important;
+    }
+    .alkf_people_s6 .alkf_role.max_width_457 {
+        max-width: 190px!important;
+    }
+    .alkf_people_s3,
+    .alkf_people_s6 {
+        margin-top: 33px;
+    }
+    .alkf_people_s5 {
+        margin-top: 21px;
+    }
+    .alkf_people_s7 {
+        margin-top: 9px;
+    }
+    .alkf_people_s6 .pd_top106,
+    .alkf_people_s7 .pd_top82 {
+        padding-top: 36px;
+    }
+
+    .alkf_aboutUs_people .alkf_people_50 .pd_top115{
+        padding-top: 24px;
+    }
+
+    .alkf_aboutUs_people .alkf_role{
+        line-height: 120%;
     }
 }

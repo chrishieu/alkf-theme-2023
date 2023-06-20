@@ -4,6 +4,9 @@ import { InnerBlocks, InspectorControls, MediaUpload, MediaUploadCheck } from "@
 import { registerBlockType } from "@wordpress/blocks";
 import { useEffect } from "@wordpress/element";
 import { RichText, BlockControls } from "@wordpress/block-editor"
+import { RichTextToolbarButton } from '@wordpress/block-editor';
+import { applyFormat, removeFormat } from '@wordpress/rich-text';
+import { useState } from 'react';
 
 registerBlockType("ourblocktheme/home-vision", {
   title: "Our Vision",
@@ -27,11 +30,14 @@ registerBlockType("ourblocktheme/home-vision", {
 
 function EditComponent(props) {
 
+	const { text } = props.attributes;
+  const [selectedText, setSelectedText] = useState('');
+
   function handleTitleChange(x) {
     props.setAttributes({ title: x })
   }
 
-	function handleTextChange(x) {
+	function onChangeContent(x) {
     props.setAttributes({ text: x })
   }
 
@@ -59,6 +65,33 @@ function EditComponent(props) {
     props.setAttributes({ txt3: x })
   }
 
+	const applyUnderline = () => {
+    if (selectedText) {
+			const updatedContent = text.replace(
+        selectedText,
+        `<u>${selectedText}</u>`
+      );
+      onChangeContent(updatedContent);
+    }
+  };
+
+  const removeUnderline = () => {
+    if (selectedText) {
+      const updatedContent = text.replace(
+        `<u>${selectedText}</u>`,
+        selectedText
+      );
+      onChangeContent(updatedContent);
+    }
+  };
+
+  const onSelectText = () => {
+    const selection = window.getSelection();
+    if (selection) {
+      setSelectedText(selection.toString());
+    }
+  };
+
   return (
     <section className="vision scrollTrigger">
 			<div className="container">
@@ -70,26 +103,47 @@ function EditComponent(props) {
 						</span>
 					</h2>
 					<div className="vision-subtitle">
-						<RichText value={props.attributes.text} onChange={handleTextChange} placeholder="Text here"/>
+						<RichTextToolbarButton
+							icon="editor-underline"
+							title="Apply Underline"
+							onClick={applyUnderline}
+							isActive={selectedText && text.includes(`<u>${selectedText}</u>`)}
+						/>
+						<RichTextToolbarButton
+							icon="editor-removeformatting"
+							title="Remove Underline"
+							onClick={removeUnderline}
+							isActive={selectedText && text.includes(`<u>${selectedText}</u>`)}
+						/>
+						<RichText
+							tagName="p"
+							value={text}
+							onChange={onChangeContent}
+							onFocus={onSelectText}
+							onSelect={onSelectText}
+							placeholder="Text here"
+							allowedFormats={['core/underline']}
+						/>
+
 					</div>
 					<div className="vision-row">
 						<div className="col-4">
 							<div className="vision-item">
-								<RichText tagName="div" className="number" value={props.attributes.number1} onChange={handleNumber1Change} placeholder="Number here"/>
+								<RichText tagName="div" className="number" value={props.attributes.number1} onChange={handleNumber1Change} placeholder="10+"/>
 								<RichText tagName="div" className="txt" value={props.attributes.txt1} onChange={handleTxt1Change} placeholder="Text here"/>
 								<img className="line" src={`${people.base_url}asset/image/line-curve.png`} alt="" />
 							</div>
 						</div>
 						<div className="col-4">
 							<div className="vision-item">
-								<RichText tagName="div" className="number" value={props.attributes.number2} onChange={handleNumber2Change} placeholder="Number here"/>
+								<RichText tagName="div" className="number" value={props.attributes.number2} onChange={handleNumber2Change} placeholder="10+"/>
 								<RichText tagName="div" className="txt" value={props.attributes.txt2} onChange={handleTxt2Change} placeholder="Text here"/>
 								<img className="line" src={`${people.base_url}asset/image/line-curve.png`} alt="" />
 							</div>
 						</div>
 						<div className="col-4">
 							<div className="vision-item">
-								<RichText tagName="div" className="number" value={props.attributes.number3} onChange={handleNumber3Change} placeholder="Number here"/>
+								<RichText tagName="div" className="number" value={props.attributes.number3} onChange={handleNumber3Change} placeholder="10+"/>
 								<RichText tagName="div" className="txt" value={props.attributes.txt3} onChange={handleTxt3Change} placeholder="Text here"/>
 								<img className="line" src={`${people.base_url}asset/image/line-curve.png`} alt="" />
 							</div>

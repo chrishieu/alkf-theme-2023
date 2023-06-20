@@ -166,6 +166,25 @@
         }
     }
 
+    function headerMenuPop() {
+        const header = document.querySelector('.headerMenuPopJS');
+        console.log("ha")
+        if (header) {
+            console.log("hi")
+            const open = header.querySelector('.headerMenuPopOpen');
+            const close = header.querySelector('.headerClose');
+
+            open.addEventListener('click', () => {
+                header.classList.add('menu-open');
+                document.querySelector('body').classList.add('no-scroll');
+            });
+            close.addEventListener('click', () => {
+                header.classList.remove('menu-open');
+                document.querySelector('body').classList.remove('no-scroll');
+            });
+        }
+    }
+
     function hero() {
         const hero = document.querySelector('.heroJS');
         if (hero) {
@@ -691,8 +710,23 @@
         }
     }
 
+    function increaseOpacityOnScroll(elementId, opacityStep) {
+        var element = document.getElementById(elementId);
+
+        window.onscroll = function () {
+            // Calculate the opacity based on the scroll position
+            var opacity = Math.min(1, (window.scrollY / window.innerHeight) + opacityStep);
+
+            // Update the element's opacity
+            element.style.opacity = opacity;
+        };
+    }
+
+
+
 
     window.swiperRun = swiperRun;
+    window.increaseOpacityOnScroll = increaseOpacityOnScroll;
     window.customizeCursor = customizeCursor;
     window.reveal = reveal;
     window.scrollTrigger = scrollTrigger;
@@ -702,6 +736,7 @@
     window.hover = hover;
     window.hero = hero;
     window.header = header;
+    window.headerMenuPop = headerMenuPop;
     window.toggleClassOnDataId = toggleClassOnDataId;
     window.checkScreen = checkScreen;
     window.toggleClassOnClick = toggleClassOnClick;

@@ -7,11 +7,17 @@ $menuParameters = array(
 	'depth'           => 0,
 );
 $links = strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
-$parts= preg_split('/(?=<a)|(?<=\/a>)/', trim($links));
+$parts1= preg_split('/(?=<a)|(?<=\/a>)/', trim($links));
+$parts = array_values(array_filter($parts1, fn($value) => !is_null(trim($value)) && trim($value) !== ''));
 $newparts = array();
 
-foreach($parts as $item) {
+$new_effect_for_menu = ' role="button" class="apply_career menu_pop_work" data-id="pop_menu_work" ';
+
+foreach($parts as $i => $item) {
 	if (trim($item) != '') {
+		if ($i == 0) {
+			$item = substr_replace($item, $new_effect_for_menu, 2, 0); 
+		}
 		$newparts[] = $item;
 	}
 }
@@ -76,14 +82,16 @@ foreach($parts as $item) {
 					<div class="header-menu-info">
 						<div class="title-h2">Contact</div>
 						<div class="content">
-							<a href="mailto:architect@alkf.com">architect@alkf.com</a>
+							<a href="#">architect@alkf.com</a>
 							<a href="#">(852) 2525 0008</a>
 						</div>
 					</div>
 					<div class="header-menu-info">
 						<div class="title-h2">Office</div>
 						<div class="content">
-							19/F, Universal Trade Centre <br /> 3 Arbuthnot Road <br /> Central, Hong Kong
+							19/F, Universal Trade Centre <br />
+							3 Arbuthnot Road <br />
+							Central, Hong Kong
 						</div>
 					</div>
 				</div>

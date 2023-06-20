@@ -64,3 +64,9 @@ new JSXBlock('home-vision', true);
 new JSXBlock('aboutus-hero', true);
 new JSXBlock('aboutus-award', true);
 new JSXBlock('aboutus-award-child', true);
+
+new JSXBlock('singleproject-big-img-popup', true);
+new JSXBlock('singleproject-title-text', true);
+new JSXBlock('singleproject-2-image-and-text', true);
+new JSXBlock('singleproject-image-and-text', true);
+new JSXBlock('singleproject-3-image', true);

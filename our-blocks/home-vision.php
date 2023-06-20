@@ -8,7 +8,7 @@
         </span>
       </h2>
       <div class="vision-subtitle">
-        <?php echo $attributes['text']; ?>
+        <?php echo applyUnderlineStyle($attributes['text']); ?>
       </div>
       <div class="vision-row">
         <div class="col-4">

@@ -83,6 +83,11 @@ document.addEventListener("DOMContentLoaded", function () {
 			console.error('Header is not working!');
 		}
 		try {
+			headerMenuPop();
+		} catch {
+			console.error('HeaderMenuPop is not working!');
+		}
+		try {
 			hero();
 		} catch {
 			console.error('hero is not working!');
@@ -108,9 +113,15 @@ document.addEventListener("DOMContentLoaded", function () {
 			console.error('reveal is not working!');
 		}
 		try {
+			window.addEventListener("scroll", increaseOpacityOnScroll('bg_overlay', 0.1));
+		} catch {
+			console.error('increaseOpacityOnScroll is not working!');
+		}
+		try {
 			makeSliderDraggable('.slider1', 'horizontal', 1);
 			makeSliderDraggable('.slider2', 'horizontal', 2);  
 			makeSliderDraggable('.slider3', 'horizontal', 3);  
+			makeSliderDraggable('.slider4', 'horizontal', 4);  
 		} catch {
 			console.error('makeSliderDraggable is not working!');
 		}

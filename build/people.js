@@ -40,16 +40,6 @@ module.exports = window["wp"]["blocks"];
 
 module.exports = window["wp"]["element"];
 
-/***/ }),
-
-/***/ "@wordpress/rich-text":
-/*!**********************************!*\
-  !*** external ["wp","richText"] ***!
-  \**********************************/
-/***/ ((module) => {
-
-module.exports = window["wp"]["richText"];
-
 /***/ })
 
 /******/ 	});
@@ -133,10 +123,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_rich_text__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/rich-text */ "@wordpress/rich-text");
-/* harmony import */ var _wordpress_rich_text__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_rich_text__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
@@ -145,6 +133,9 @@ __webpack_require__.r(__webpack_exports__);
 
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.registerBlockType)("ourblocktheme/people", {
   title: "Our People",
+  supports: {
+    align: ["full"]
+  },
   attributes: {
     align: {
       type: "string",
@@ -164,12 +155,9 @@ __webpack_require__.r(__webpack_exports__);
 });
 function EditComponent(props) {
   const {
-    attributes,
-    setAttributes
-  } = props;
-  const {
     textContent
-  } = attributes;
+  } = props.attributes;
+  const [selectedText, setSelectedText] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)('');
   const onChangeContent = newContent => {
     props.setAttributes({
       text: newContent
@@ -179,6 +167,22 @@ function EditComponent(props) {
     props.setAttributes({
       textContent: newContent
     });
+  };
+  const applyUnderline = () => {
+    if (typeof selectedText === 'string') {
+      const updatedContent = textContent.replace(selectedText, `<u>${selectedText}</u>`);
+      onChangeTextContent(updatedContent);
+    }
+  };
+  const removeUnderline = () => {
+    if (typeof selectedText === 'string') {
+      const updatedContent = textContent.replace(`<u>${selectedText}</u>`, selectedText);
+      onChangeTextContent(updatedContent);
+    }
+  };
+  const onSelectText = event => {
+    const selected = event.target.value;
+    setSelectedText(selected);
   };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: "people section-pri scrollTrigger"
@@ -191,17 +195,30 @@ function EditComponent(props) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
     value: props.attributes.text,
     onChange: onChangeContent,
-    placeholder: "Enter text here..."
+    placeholder: "Enter text here"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     className: "line",
-    src: `${people.base_url}/asset/image/line-home9.png`,
-    alt: ""
+    alt: "",
+    src: `${people.base_url}/asset/image/line-home9.png`
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "people-subtitle"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichTextToolbarButton, {
+    icon: "editor-underline",
+    title: "Apply Underline",
+    onClick: applyUnderline,
+    isActive: typeof selectedText === 'string' && textContent.includes(`<u>${selectedText}</u>`)
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichTextToolbarButton, {
+    icon: "editor-removeformatting",
+    title: "Remove Underline",
+    onClick: removeUnderline,
+    isActive: typeof selectedText === 'string' && textContent.includes(`<u>${selectedText}</u>`)
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+    tagName: "p",
     value: textContent,
-    onChange: onChangeTextContent,
-    placeholder: "Enter text..."
+    onChange: onChangeContent,
+    onFocus: onSelectText,
+    onSelect: onSelectText,
+    allowedFormats: ['core/underline']
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "people-grid"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {

@@ -2,16 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "react":
-/*!************************!*\
-  !*** external "React" ***!
-  \************************/
-/***/ ((module) => {
-
-module.exports = window["React"];
-
-/***/ }),
-
 /***/ "@wordpress/api-fetch":
 /*!**********************************!*\
   !*** external ["wp","apiFetch"] ***!
@@ -59,16 +49,6 @@ module.exports = window["wp"]["components"];
 /***/ ((module) => {
 
 module.exports = window["wp"]["element"];
-
-/***/ }),
-
-/***/ "@wordpress/rich-text":
-/*!**********************************!*\
-  !*** external ["wp","richText"] ***!
-  \**********************************/
-/***/ ((module) => {
-
-module.exports = window["wp"]["richText"];
 
 /***/ })
 
@@ -143,9 +123,9 @@ module.exports = window["wp"]["richText"];
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!***********************************!*\
-  !*** ./our-blocks/home-vision.js ***!
-  \***********************************/
+/*!**************************************!*\
+  !*** ./our-blocks/aboutus-people.js ***!
+  \**************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
@@ -157,10 +137,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _wordpress_rich_text__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/rich-text */ "@wordpress/rich-text");
-/* harmony import */ var _wordpress_rich_text__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_rich_text__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
@@ -168,11 +144,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__.registerBlockType)("ourblocktheme/home-vision", {
-  title: "Our Vision",
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__.registerBlockType)("ourblocktheme/aboutus-hero", {
+  title: "About us - hero",
   supports: {
     align: ["full"]
   },
@@ -181,60 +154,24 @@ __webpack_require__.r(__webpack_exports__);
       type: "string",
       default: "full"
     },
-    title: {
-      type: "string",
-      default: ""
+    headline: {
+      type: "string"
     },
-    text: {
-      type: "string",
-      default: ""
+    imgID: {
+      type: "number"
     },
-    number1: {
+    imgURL: {
       type: "string",
-      default: ""
-    },
-    txt1: {
-      type: "string",
-      default: ""
-    },
-    number2: {
-      type: "string",
-      default: ""
-    },
-    txt2: {
-      type: "string",
-      default: ""
-    },
-    number3: {
-      type: "string",
-      default: ""
-    },
-    txt3: {
-      type: "string",
-      default: ""
+      default: people.base_url + 'asset/image/home-hero.jpg'
     }
   },
   edit: EditComponent,
   save: SaveComponent
 });
 function EditComponent(props) {
-  const {
-    text
-  } = props.attributes;
-  const [selectedText, setSelectedText] = (0,react__WEBPACK_IMPORTED_MODULE_6__.useState)('');
-  function handleTitleChange(x) {
+  function handleHeadlineChange(x) {
     props.setAttributes({
-      title: x
-    });
-  }
-  function onChangeContent(x) {
-    props.setAttributes({
-      text: x
-    });
-  }
-  function handleNumber1Change(x) {
-    props.setAttributes({
-      number1: x
+      headline: x
     });
   }
   function handleTxt1Change(x) {
@@ -242,9 +179,9 @@ function EditComponent(props) {
       txt1: x
     });
   }
-  function handleNumber2Change(x) {
+  function handleNum1Change(x) {
     props.setAttributes({
-      number2: x
+      num1: x
     });
   }
   function handleTxt2Change(x) {
@@ -252,9 +189,9 @@ function EditComponent(props) {
       txt2: x
     });
   }
-  function handleNumber3Change(x) {
+  function handleNum2Change(x) {
     props.setAttributes({
-      number3: x
+      num2: x
     });
   }
   function handleTxt3Change(x) {
@@ -262,125 +199,130 @@ function EditComponent(props) {
       txt3: x
     });
   }
-  const applyUnderline = () => {
-    if (selectedText) {
-      const updatedContent = text.replace(selectedText, `<u>${selectedText}</u>`);
-      onChangeContent(updatedContent);
+  function handleNum3Change(x) {
+    props.setAttributes({
+      num3: x
+    });
+  }
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    title: "Hero Image",
+    initialOpen: true
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
+    onSelect: onFileSelect,
+    value: props.attributes.imgID,
+    render: _ref => {
+      let {
+        open
+      } = _ref;
+      return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+        onClick: open
+      }, "Choose Image");
     }
-  };
-  const removeUnderline = () => {
-    if (selectedText) {
-      const updatedContent = text.replace(`<u>${selectedText}</u>`, selectedText);
-      onChangeContent(updatedContent);
-    }
-  };
-  const onSelectText = () => {
-    const selection = window.getSelection();
-    if (selection) {
-      setSelectedText(selection.toString());
-    }
-  };
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
-    className: "vision scrollTrigger"
+  }))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "alkf_aboutUs_section alkf_aboutUs_sec_1 reveal"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "container"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "vision-wrap section-pri"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
-    className: "title-h2 vision-title"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "align-underline"
+    className: "alkf_aboutUs_title text"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
-    value: props.attributes.title,
-    onChange: handleTitleChange,
-    placeholder: "Title here"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    className: "line",
-    src: `${people.base_url}asset/image/line-home9.png`,
-    alt: ""
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "vision-subtitle"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichTextToolbarButton, {
-    icon: "editor-underline",
-    title: "Apply Underline",
-    onClick: applyUnderline,
-    isActive: selectedText && text.includes(`<u>${selectedText}</u>`)
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichTextToolbarButton, {
-    icon: "editor-removeformatting",
-    title: "Remove Underline",
-    onClick: removeUnderline,
-    isActive: selectedText && text.includes(`<u>${selectedText}</u>`)
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
-    tagName: "p",
-    value: text,
-    onChange: onChangeContent,
-    onFocus: onSelectText,
-    onSelect: onSelectText,
-    placeholder: "Text here",
-    allowedFormats: ['core/underline']
+    tagName: "h1",
+    className: "title_h1",
+    value: props.attributes.headline,
+    onChange: handleHeadlineChange,
+    placeholder: "Headline here"
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "vision-row"
+    className: "alkf_aboutUs_banner sh_100img hover_mouse"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: `${props.attributes.imgURL}`,
+    alt: "ALKF+"
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "alkf_aboutUs_section alkf_aboutUs_sec_2 reveal"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "col-4"
+    className: "alkf_aboutUs_about text"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "vision-item"
+    className: "alkf_aboutUs_subtitle"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
+    tagName: "p",
+    value: props.attributes.profileTitle,
+    onChange: handleProfileTitleChange,
+    placeholder: "Profile title here"
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "alkf_aboutUs_about_contents text"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "alkf_aboutUs_main_contents"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
+    tagName: "p",
+    multiline: "p",
+    className: "text_hide_mob",
+    placeholder: "For example: Andrew Lee King Fun & Associates Architects was first established in Hong Kong in 1962 and was incorporated as a limited company in 1998. It is now one of the most innovative and experienced architectural practices in Hong Kong.",
+    value: props.attributes.profileText,
+    onChange: handleProfileTextChange,
+    keepPlaceholderOnFocus: true,
+    unstableOnSplit: value => renderParagraphs(value)
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    className: "text_show_mob",
+    href: "#"
+  }, "Read more"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    class: "vision-row text"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    class: "col-4"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    class: "vision-item"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
     tagName: "div",
     className: "number",
-    value: props.attributes.number1,
-    onChange: handleNumber1Change,
-    placeholder: "10+"
+    value: props.attributes.num1,
+    onChange: handleNum1Change,
+    placeholder: "Number"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
     tagName: "div",
     className: "txt",
     value: props.attributes.txt1,
     onChange: handleTxt1Change,
-    placeholder: "Text here"
+    placeholder: "Text"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    className: "line",
-    src: `${people.base_url}asset/image/line-curve.png`,
+    class: "line",
+    src: `${people.base_url + '/asset/image/line-curve.png'}`,
     alt: ""
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "col-4"
+    class: "col-4"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "vision-item"
+    class: "vision-item"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
     tagName: "div",
     className: "number",
-    value: props.attributes.number2,
-    onChange: handleNumber2Change,
-    placeholder: "10+"
+    value: props.attributes.num2,
+    onChange: handleNum2Change,
+    placeholder: "Number"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
     tagName: "div",
     className: "txt",
     value: props.attributes.txt2,
     onChange: handleTxt2Change,
-    placeholder: "Text here"
+    placeholder: "Text"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    className: "line",
-    src: `${people.base_url}asset/image/line-curve.png`,
+    class: "line",
+    src: `${people.base_url + '/asset/image/line-curve.png'}`,
     alt: ""
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "col-4"
+    class: "col-4"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "vision-item"
+    class: "vision-item"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
     tagName: "div",
     className: "number",
-    value: props.attributes.number3,
-    onChange: handleNumber3Change,
-    placeholder: "10+"
+    value: props.attributes.num3,
+    onChange: handleNum3Change,
+    placeholder: "Number"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
     tagName: "div",
     className: "txt",
     value: props.attributes.txt3,
     onChange: handleTxt3Change,
-    placeholder: "Text here"
+    placeholder: "Text"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    className: "line",
-    src: `${people.base_url}asset/image/line-curve.png`,
+    class: "line",
+    src: `${people.base_url + '/asset/image/line-curve.png'}`,
     alt: ""
-  })))))));
+  })))));
 }
 function SaveComponent() {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks.Content, null);
@@ -389,4 +331,4 @@ function SaveComponent() {
 
 /******/ })()
 ;
-//# sourceMappingURL=home-vision.js.map
+//# sourceMappingURL=aboutus-people.js.map
