@@ -1,4 +1,37 @@
-<!-- popup menu works -->
+<?php 
+$menuParameters = array(
+	'menu' => 'side-menu',
+	'container'       => false,
+	'echo'            => false,
+	'items_wrap'      => '%3$s',
+	'depth'           => 0,
+);
+$links = strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
+$parts= preg_split('/(?=<a)|(?<=\/a>)/', trim($links));
+$newparts = array();
+
+foreach($parts as $i => $item) {
+	if (trim($item) != '') {
+		$newparts[] = $item;
+	}
+}
+
+$project_parent_terms = get_terms( array(
+	'taxonomy'   => 'group',
+	'hide_empty' => true,
+	'parent' => 0
+) );
+
+$excludeids = array();
+foreach($project_parent_terms as $item) {
+	$excludeids[] = $item->term_id;
+}
+
+$project_child_terms = get_terms( 'group', array( 'exclude'  => $excludeids) );
+
+
+?>
+
 <div class="job_desc popup_menu_work" data-id="pop_menu_work">
 	<button class="close_jobdesc close_popMenuWork"><img src="<?php echo get_theme_file_uri('/www/asset/image/icon-close.svg'); ?>" alt=""></button>
 	<div class="full_showSection">
@@ -6,7 +39,7 @@
 			<div class="container">
 				<div class="header-wrap">
 					<div class="header-quote">
-						<a href="#" class="header-logo">
+						<a href="<?php echo get_home_url(); ?>" class="header-logo">
 							<img src="<?php echo get_theme_file_uri('/www/asset/image/logo-header.svg'); ?>" alt="" />
 						</a>
 						<p>Design built on legacy</p>
@@ -19,13 +52,14 @@
 							<form action="#" method="get">
 								<label class="header-search-wrap">
 									<div class="header-search-icon">
-										<a href="/search.html">
+										<?php $search_link = get_field('search_link', 'options'); ?>
+										<a href="<?php echo $search_link['url']; ?>">
 											<img src="<?php echo get_theme_file_uri('/www/asset/image/icon-search.svg'); ?>" alt="" />
 										</a>
 									</div>
 									<input type="search" name="s" class="rs-form header-search-inp"
 										placeholder="" />
-									<a href="project.html">Start a project</a>
+									<?php echo $newparts[1]; ?>
 								</label>
 							</form>
 						</div>
@@ -71,20 +105,13 @@
 						</div>
 						<div class="header-menu-right">
 							<div class="menu">
-								<ul>
-									<li>
-										<a href="insights.html">Insight</a>
-									</li>
-									<li>
-										<a href="career.html">Careers</a>
-									</li>
-									<li>
-										<a href="about-us.html">About</a>
-									</li>
-									<li>
-										<a href="project.html">Project</a>
-									</li>
-								</ul>
+								<?php
+								wp_nav_menu(
+									array(
+										'menu' => 'main-menu',
+										'container' => '',
+									));
+								?>
 							</div>
 						</div>
 					</div>
@@ -93,18 +120,17 @@
 		</header>
 		<div class="content_menu_works">
 			<ul class="col_st">
-				<li>Interior</li>
-				<li>Residental</li>
-				<li>Residental</li>
+				<?php foreach($project_parent_terms as $item): ?>
+					<li><a href="<?php echo get_term_link($item); ?>"><?php echo $item->name; ?></a></li>
+				<?php endforeach; ?>
 			</ul>
 			<ul class="col_nd">
-				<li>Commercial</li>
-				<li>Institutional</li>
-				<li>Industrial</li>
-				<li>Infrastructure</li>
+				<?php foreach($project_child_terms as $item): ?>
+					<li><a href="<?php echo get_term_link($item); ?>"><?php echo $item->name; ?></a></li>
+				<?php endforeach; ?>
 			</ul>
 			<ul class="col_rd">
-				<li>Explore our expertise</li>
+				<li><?php echo $newparts[0]; ?></li>
 			</ul>
 		</div>
 	</div>

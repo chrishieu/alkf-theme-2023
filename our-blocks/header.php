@@ -32,7 +32,7 @@ foreach($parts as $i => $item) {
 				<p>Design built on legacy</p>
 			</div>
 			<div class="header-cta">
-				<?php echo $newparts[0]; ?>
+				<a role="button" class="apply_career menu_pop_work" data-id="pop_menu_work">Works</a>
 			</div>
 			<div class="header-btn">
 				<div class="header-search">
