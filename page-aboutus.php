@@ -103,33 +103,35 @@ global $post;
 							</div>
 						</div>
 					</div>
-					<div class="founder_mob hide_on_desktop border_bottom">
-						<div class="dl_grid">
-							<div class="img_fd">
-								<img src="<?php echo $quote_author_image['sizes']['4_6_small']; ?>" />
-							</div>
+                    <div class="founder_mob hide_on_desktop border_bottom">
+                        <div class="dl_grid">
+                            <div class="img_fd">
+                                <img src="<?php echo $quote_author_image['sizes']['4_6_small']; ?>" />
+                            </div>
                             <div class="alkf_career_about_contents text">
                                 <div class="alkf_career_main_contents">
-	                                <?php echo get_field('quote_text', $post); ?>
-                                <div>
-                                <div class="alkf_career_name pd_top120 text">
-                                    <p>
-		                                <?php
-		                                $quote_author = get_field('quote_author', $post);
-		                                $quote_author_position = get_field('quote_author_position', $post);
-		                                echo $quote_author . ', ' . $quote_author_position;
-		                                ?>
-                                    </p>
+									<?php echo get_field('quote_text', $post); ?>
+                                    <div>
+                                        <div class="alkf_career_name pd_top120 text">
+                                            <p>
+												<?php
+												$quote_author = get_field('quote_author', $post);
+												$quote_author_position = get_field('quote_author_position', $post);
+												echo $quote_author . ', ' . $quote_author_position;
+												?>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
+                                <!--						<div class="dl_grid">-->
+                                <!--							<div class="empty"></div>-->
+                                <!--							<div class="img_fd">-->
+                                <!--								<img src="--><?php //echo $quote_author_image_2['sizes']['4_6_small']; ?><!--" />-->
+                                <!--							</div>-->
+                                <!--						</div>-->
                             </div>
-						</div>
-<!--						<div class="dl_grid">-->
-<!--							<div class="empty"></div>-->
-<!--							<div class="img_fd">-->
-<!--								<img src="--><?php //echo $quote_author_image_2['sizes']['4_6_small']; ?><!--" />-->
-<!--							</div>-->
-<!--						</div>-->
-					</div>
+                        </div>
+                    </div>
 
 					<?php $quote_image = get_field('quote_image', $post); ?>
 					<div class="alkf_mobile_text_3 alkf_career_section alkf_career_sec_3 reveal hide_on_mobile">
