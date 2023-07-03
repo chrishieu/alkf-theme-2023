@@ -44,11 +44,11 @@ new JSXBlock('people', true, ['base_url' => get_theme_file_uri('/www/')]);
 new JSXBlock('people-image', true);
 
 new JSXBlock('career-hero', true);
-new JSXBlock('career-quote', true);
+// new JSXBlock('career-quote', true);
 new JSXBlock('career-big-image', true);
 new JSXBlock('career-list-item', true);
-new JSXBlock('career-quote-2', true);
-new JSXBlock('career-quote-3', true);
+// new JSXBlock('career-quote-2', true);
+// new JSXBlock('career-quote-3', true);
 
 new JSXBlock('insight-slideshow', true);
 new JSXBlock('insight-swiper-post', true);
@@ -61,9 +61,9 @@ new JSXBlock('insight--detail-2-image-and-text', true);
 new JSXBlock('home-insight', true);
 new JSXBlock('home-vision', true);
 
-new JSXBlock('aboutus-hero', true);
-new JSXBlock('aboutus-award', true);
-new JSXBlock('aboutus-award-child', true);
+// new JSXBlock('aboutus-hero', true);
+// new JSXBlock('aboutus-award', true);
+// new JSXBlock('aboutus-award-child', true);
 
 new JSXBlock('singleproject-big-img-popup', true);
 new JSXBlock('singleproject-title-text', true);

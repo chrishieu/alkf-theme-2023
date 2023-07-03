@@ -112,7 +112,7 @@ $post_list = get_posts(array(
           </div>
           <div class="job_desc_input file_input">
             <label for="myFileInput" class="file-input-label">Attachment</label>
-            <input type="file" id="myFileInput" name="upload">
+            <input type="file" id="myFileInput" class="myuploadfile" name="upload">
           </div>
           <button type="submit">Submit</button>
         </form>

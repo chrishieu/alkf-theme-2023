@@ -177,6 +177,25 @@ function nl2p( $text, $class = '' ) {
   return '<p' . ( $class ? ' class="' . $class . '"' : '' ) . '>' . $string . '</p>';
 }
 
+function is_not_homepage_and_not_admin() {
+  // Check if the current page is the homepage
+  if (is_home() || is_front_page()) {
+      return false; // It is the homepage, so return false
+  }
+
+  // Check if the current page is an admin page
+  if (is_admin()) {
+      return false; // It is an admin page, so return false
+  }
+
+  // If neither the homepage nor an admin page, return true
+  return true;
+}
+
+if (is_not_homepage_and_not_admin()) {
+  echo "<style>html, body{overflow-x:hidden;</style>";
+}
+
 // Block theme functions
 include(get_stylesheet_directory() . '/functions/functions-block-theme.php');
 

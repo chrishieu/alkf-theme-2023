@@ -82,16 +82,18 @@ foreach($parts as $i => $item) {
 					<div class="header-menu-info">
 						<div class="title-h2">Contact</div>
 						<div class="content">
-							<a href="#">architect@alkf.com</a>
+							<a href="mailto:architect@alkf.com">architect@alkf.com</a>
 							<a href="#">(852) 2525 0008</a>
 						</div>
 					</div>
 					<div class="header-menu-info">
 						<div class="title-h2">Office</div>
 						<div class="content">
+							<a href="https://goo.gl/maps/zJvfad9Frf4UT2yw5">
 							19/F, Universal Trade Centre <br />
 							3 Arbuthnot Road <br />
 							Central, Hong Kong
+							</a>
 						</div>
 					</div>
 				</div>

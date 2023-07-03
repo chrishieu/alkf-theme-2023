@@ -113,6 +113,11 @@ document.addEventListener("DOMContentLoaded", function () {
 			console.error('reveal is not working!');
 		}
 		try {
+			displayFileName('.myuploadfile');
+		} catch {
+			console.error('displayFileName is not working!');
+		}
+		try {
 			window.addEventListener("scroll", increaseOpacityOnScroll('bg_overlay', 0.1));
 		} catch {
 			console.error('increaseOpacityOnScroll is not working!');

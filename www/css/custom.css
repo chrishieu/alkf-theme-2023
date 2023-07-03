@@ -79,6 +79,10 @@ video {
     vertical-align: baseline
 }
 
+html, body {
+    overflow-x:hidden;
+}
+
 article,
 aside,
 details,
@@ -699,6 +703,7 @@ textarea::placeholder {
     position: relative
 }
 
+.hero-img video,
 .hero-img img {
     position: absolute;
     bottom: 0;
@@ -1219,6 +1224,7 @@ textarea::placeholder {
         /* overflow: hidden; */
     }
 
+    .hero-img video,
     .hero-img img {
         /* position: relative; */
         height: 460px !important;
@@ -1231,7 +1237,7 @@ textarea::placeholder {
     }
 
     .title-h1 {
-        font-size: clamp(18px, 1.25vw, 24px);
+        font-size: clamp(20px, 1.25vw, 24px);
     }
 
     .slider-content {
@@ -1992,12 +1998,12 @@ body {
         text-overflow: ellipsis;
         padding-bottom: 56px;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 24px;
     }
 
 
     .alkf_insights_slider .slider-container .item {
         object-fit: cover;
-        padding-right: 1.1979166666666667vw;
     }
 
 
@@ -4205,7 +4211,7 @@ label.label-focus {
         font-size: clamp(14px, 0.8333333333333334vw, 16px);
     }
 
-    .alkf_mobile_text_4 .alkf_career_about_contents .alkf_career_main_contents p{
+    .alkf_mobile_text_4 .alkf_career_about_contents .alkf_career_main_contents p {
         font-size: clamp(16px, 9vw, 40px);
         line-height: clamp(12px, 10vw, 40px);
         margin-top: 60px;
@@ -5227,6 +5233,7 @@ label.label-focus {
 }
 
 @media (min-width: 200px) {
+
     .about_us_content p,
     .about_us_content span,
     .alkf_title span,
@@ -5234,20 +5241,23 @@ label.label-focus {
     .alkf_aboutUs_section p,
     .alkf_role.text p,
     .alkf_career_section .vision-item .number,
-    .alkf_career_section .vision-item .txt{
-        color:#FFF
+    .alkf_career_section .vision-item .txt {
+        color: #FFF
     }
+
     .alkf_img {
         position: relative;
     }
-    .about_us_content .alkf_career_strategies .strategies_des:after{
-        background:#FFF !important;
+
+    .about_us_content .alkf_career_strategies .strategies_des:after {
+        background: #FFF !important;
     }
+
     .about_us_content .awards_position:not(:first-child),
     .about_us_content .alkf_career_section .vision-row,
     .about_us_content .border_bottom,
     .about_us_content .alkf_people_s7 {
-        border-bottom:1px solid #FFF !important
+        border-bottom: 1px solid #FFF !important
     }
 
     .about_name_alkf:hover {
@@ -5545,14 +5555,14 @@ label.label-focus {
         height: 100%;
     }
 
-    .about_us_content{
+    .about_us_content {
         position: relative;
         z-index: 999;
-        display:block;
-        margin-top:35em
+        display: block;
+        margin-top: 35em
     }
 
-    .about_us_content.active+.background_overlay{
+    .about_us_content.active+.background_overlay {
         position: fixed;
         top: 0;
         left: 0;
@@ -5564,20 +5574,24 @@ label.label-focus {
         background: #000;
         opacity: 0;
     }
+
     .is_about_us_page p,
     .is_about_us_page a,
     .is_about_us_page,
-    .is_about_us_page span{
-        color:#FFF !important
+    .is_about_us_page span {
+        color: #FFF !important
     }
+
     .is_about_us_page .content::after,
-    .is_about_us_page .content::before{
-        background:#FFF;
+    .is_about_us_page .content::before {
+        background: #FFF;
     }
-    .is_about_us_page .footer-bottom{
-        border-bottom:1px solid #FFF
+
+    .is_about_us_page .footer-bottom {
+        border-bottom: 1px solid #FFF
     }
-    .is_about_us_page{
+
+    .is_about_us_page {
         z-index: 999999;
     }
 
@@ -6872,16 +6886,19 @@ label.label-focus {
     height: 4px;
     top: calc(50% - 3px);
 }
+
 .pop_slider_project .swiper-button-next:after {
     position: absolute;
     padding: 0;
     right: 10px;
 }
+
 .pop_slider_project .swiper-button-prev:after {
     position: absolute;
     padding: 0;
     left: 10px;
 }
+
 .pop_slider_project .swiper-button-prev {
     left: auto;
     right: 55px;
@@ -6904,7 +6921,7 @@ label.label-focus {
     line-height: 120%;
 }
 
-.alkf_project_detail_page .prd_sc13 img{
+.alkf_project_detail_page .prd_sc13 img {
     height: 100%;
     object-fit: cover;
 }
@@ -6981,33 +6998,37 @@ label.label-focus {
 .close_popMenuWork img {
     padding: 8px;
 }
-.popup_menu_work{
+
+.popup_menu_work {
     width: 100%;
     height: 0;
     background: url(../asset/image/bg-popup-menu-work.jpg) no-repeat center center;
 }
-.popup_menu_work.active_pop{
+
+.popup_menu_work.active_pop {
     height: 100vh;
 }
-.popup_menu_work .full_showSection .header-menu{
+
+.popup_menu_work .full_showSection .header-menu {
     background-color: transparent;
 }
 
-.popup_menu_work .full_showSection .headerMenuPopJS.menu-open .header-menu{
+.popup_menu_work .full_showSection .headerMenuPopJS.menu-open .header-menu {
     background-color: #000000;
 
 }
 
-.header-btn a:hover{
+.header-btn a:hover {
     color: #e23426;
 }
 
-.popup_menu_work .header{
+.popup_menu_work .header {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
-    background-color: transparent; 
+    background-color: transparent;
 }
-.popup_menu_work .header:after{
+
+.popup_menu_work .header:after {
     position: absolute;
     content: "";
     background: #ffffff;
@@ -7020,58 +7041,67 @@ label.label-focus {
     z-index: -1;
 }
 
-.popup_menu_work .header-search-icon img{
-    -webkit-filter: invert(100%); 
-    -moz-filter: invert(100%); 
-    -ms-filter: invert(100%); 
-    -o-filter: invert(100%); 
+.popup_menu_work .header-search-icon img {
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    -ms-filter: invert(100%);
+    -o-filter: invert(100%);
     filter: invert(100%);
 }
-.popup_menu_work .header-lang .lang-item{
+
+.popup_menu_work .header-lang .lang-item {
     color: #000000;
 }
-.popup_menu_work .header-lang .lang-item:hover{
+
+.popup_menu_work .header-lang .lang-item:hover {
     color: #ffffff;
 }
-.popup_menu_work  .content_menu_works{
+
+.popup_menu_work .content_menu_works {
     display: flex;
     flex-wrap: nowrap;
     gap: 217px;
     margin-top: 160px;
     padding: 0 84px;
 }
-.content_menu_works li{
+
+.content_menu_works li {
     font-size: clamp(1.25vw, 1.875vw, 36px);
     line-height: 1;
     margin-bottom: 31px;
     font-family: 'Graphik LCG';
 }
-body.no-scroll .popup_menu_work .close_popMenuWork{
+
+body.no-scroll .popup_menu_work .close_popMenuWork {
     opacity: 0;
 }
-body .popup_menu_work .close_popMenuWork{
+
+body .popup_menu_work .close_popMenuWork {
     opacity: 1;
 }
+
 /* .alkf_aboutUs_sec_2 */
-.alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents{
+.alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents {
     display: grid;
     grid-template-columns: 0.25fr 1fr;
     gap: 24px;
 }
+
 .alkf_aboutUs_sec_2 {
     margin-bottom: 111px;
 }
-.alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_text{
+
+.alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_text {
     position: relative;
 }
 
-.alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_img{
+.alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
 }
 
-.alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_text .text_top{
+.alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_text .text_top {
     font-style: normal;
     font-weight: 400;
     font-size: clamp(24px, 3.3333333333333335vw, 64px);
@@ -7079,10 +7109,11 @@ body .popup_menu_work .close_popMenuWork{
     color: #FFF;
     font-family: var(--font-family);
 }
-.alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_text .text_bot{
+
+.alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_text .text_bot {
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(16px, 1.0416666666666667vw,20px);
+    font-size: clamp(16px, 1.0416666666666667vw, 20px);
     line-height: 120%;
     color: #FFF;
     font-family: var(--font-family);
@@ -7091,14 +7122,14 @@ body .popup_menu_work .close_popMenuWork{
 }
 
 .aboutUs_text_atMob,
-.alkf_block_slider_about
- {
+.alkf_block_slider_about {
     display: none;
 }
 
-.alkf_project_aboutUs .hide_on_desktop{
+.alkf_project_aboutUs .hide_on_desktop {
     display: none;
 }
+
 @media (min-width: 1201px) {
     .alkf_project_detail_page .sh_797 {
         height: 797px;
@@ -7109,7 +7140,7 @@ body .popup_menu_work .close_popMenuWork{
         object-fit: cover;
     }
 
-    .alkf_project_aboutUs .hide_on_mobile{
+    .alkf_project_aboutUs .hide_on_mobile {
         display: block;
     }
 
@@ -7125,33 +7156,35 @@ body .popup_menu_work .close_popMenuWork{
         top: 5px;
         scale: .8;
     }
-    .pop_slider_project .swiper-counter{
+
+    .pop_slider_project .swiper-counter {
         display: block;
     }
 
-    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents{
+    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents {
         gap: 10px;
     }
 
-    .about_us_content{
+    .about_us_content {
         margin-top: 70em;
     }
-    
+
     .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents,
-    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_img{
+    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_img {
         gap: 12px;
     }
 
-    .hide_on_mobile{
+    .hide_on_mobile {
         display: block;
     }
 
 }
 
 @media (max-width: 767px) {
-    .pop_slider_project .swiper-counter{
+    .pop_slider_project .swiper-counter {
         display: block;
     }
+
     .alfk_project_detail_gid {
         flex-wrap: wrap;
     }
@@ -7170,7 +7203,7 @@ body .popup_menu_work .close_popMenuWork{
         gap: 24px;
     }
 
-    .alkf_project_detail_page .prd_sc2, 
+    .alkf_project_detail_page .prd_sc2,
     .alkf_project_detail_page .prd_sc3,
     .alkf_project_detail_page .prd_sc5,
     .alkf_project_detail_page .prd_sc7,
@@ -7184,10 +7217,11 @@ body .popup_menu_work .close_popMenuWork{
         margin-bottom: 200px;
     }
 
-    .pop_slider_project .swiper-slide .project_img_pop{
+    .pop_slider_project .swiper-slide .project_img_pop {
         height: 480px;
         width: 100%;
     }
+
     .pop_slider_project .close_popSlider {
         top: 10px;
         right: 10px;
@@ -7196,13 +7230,14 @@ body .popup_menu_work .close_popMenuWork{
     .pop_slider_project .swiper-button-next {
         right: 30px;
     }
+
     .pop_slider_project .right .swiper-counter,
     .pop_slider_project .right .swiper-des {
         left: 0;
     }
 
     .alkf_people.alkf_grid_1_1 {
-        padding-top: 12px!important;
+        padding-top: 12px !important;
     }
 
     /* .alkf_grid_1_1 .alkf_img:last-child{
@@ -7213,7 +7248,7 @@ body .popup_menu_work .close_popMenuWork{
         right: 75px;
     }
 
-    .alkf_aboutUs_sec_1{
+    .alkf_aboutUs_sec_1 {
         max-height: auto;
         overflow: initial;
         position: relative;
@@ -7231,11 +7266,11 @@ body .popup_menu_work .close_popMenuWork{
         border-bottom: 1px solid #ffffff;
     }
 
-    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents{
+    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents {
         grid-template-columns: 1fr;
     }
 
-    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_text .text_bot{
+    .alkf_aboutUs_sec_2 .alkf_aboutUs_main_contents .col_text .text_bot {
         position: relative;
         margin-top: 17px;
     }
@@ -7254,46 +7289,49 @@ body .popup_menu_work .close_popMenuWork{
         height: 307px;
         width: 235px;
     }
-    .slider4{
+
+    .slider4 {
         width: 100%;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
     }
 
-    .alkf_block_slider_about{
+    .alkf_block_slider_about {
         display: block;
     }
 
-    .alkf_aboutUs_sec_2{
+    .alkf_aboutUs_sec_2 {
         margin-bottom: 50px;
     }
 
-    .alkf_block_slider_about .alkf_insights_slider .item_small img{
+    .alkf_block_slider_about .alkf_insights_slider .item_small img {
         aspect-ratio: 1 / 1.35;
     }
 
-    .alkf_project_aboutUs .hide_on_desktop{
+    .alkf_project_aboutUs .hide_on_desktop {
         display: block;
     }
 
-    .alkf_project_aboutUs .hide_on_mobile{
+    .alkf_project_aboutUs .hide_on_mobile {
         display: none;
     }
 
-    .founder_mob{
-       padding-bottom: 43px;
+    .founder_mob {
+        padding-bottom: 43px;
     }
 
-    .founder_mob .dl_grid{
+    .founder_mob .dl_grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 12px;
         justify-content: end;
         align-items: end;
     }
-    .founder_mob .dl_grid:last-child{
+
+    .founder_mob .dl_grid:last-child {
         margin-top: 16px;
     }
+
     .founder_mob .alkf_career_name {
         font-family: var(--font-family);
         font-style: normal;
@@ -7302,6 +7340,7 @@ body .popup_menu_work .close_popMenuWork{
         line-height: 16px;
         color: #000000;
     }
+
     .alkf_mobile_text_2.alkf_career_section.alkf_career_sec_2 {
         margin-bottom: 20px;
     }
@@ -7315,9 +7354,9 @@ body .popup_menu_work .close_popMenuWork{
         line-height: 20px !important;
     }
 
-    .alkf_mobile_text_4 .alkf_career_about_contents .alkf_career_name p{
+    .alkf_mobile_text_4 .alkf_career_about_contents .alkf_career_name p {
         font-size: 14px !important;
-       line-height: 14px !important;
+        line-height: 14px !important;
     }
 
 
@@ -7325,52 +7364,218 @@ body .popup_menu_work .close_popMenuWork{
         margin-top: 0;
     }
 
-    .alkf_people_s1 .alkf_people_50 .alkf_img:last-child, 
+    .alkf_people_s1 .alkf_people_50 .alkf_img:last-child,
     .alkf_people_s2 .alkf_people_50 .alkf_img:last-child {
         margin-top: -50px;
     }
 
-    .alkf_people_s3 .alkf_people_50 .alkf_img:last-child, 
+    .alkf_people_s3 .alkf_people_50 .alkf_img:last-child,
     .alkf_people_s4 .alkf_people_50 .alkf_img:last-child {
         margin-top: -96px;
     }
 
     .alkf_people_s5 .alkf_people_50 .alkf_img:last-child,
-    .alkf_people_s6 .alkf_people_50 .alkf_img:last-child, 
+    .alkf_people_s6 .alkf_people_50 .alkf_img:last-child,
     .alkf_people_s7 .alkf_people_50 .alkf_img:last-child {
         margin-top: 0;
     }
+
     .alkf_aboutUs_people .alkf_role {
         padding-bottom: 8px;
     }
+
     .alkf_people_s1 .alkf_role,
     .alkf_people_s5 .alkf_role,
     .alkf_people_s6 .alkf_role {
-        max-width: 90px!important;
+        max-width: 90px !important;
     }
+
     .alkf_people_s6 .alkf_role.max_width_457 {
-        max-width: 190px!important;
+        max-width: 190px !important;
     }
+
     .alkf_people_s3,
     .alkf_people_s6 {
         margin-top: 33px;
     }
+
     .alkf_people_s5 {
         margin-top: 21px;
     }
+
     .alkf_people_s7 {
         margin-top: 9px;
     }
+
     .alkf_people_s6 .pd_top106,
     .alkf_people_s7 .pd_top82 {
         padding-top: 36px;
     }
 
-    .alkf_aboutUs_people .alkf_people_50 .pd_top115{
+    .alkf_aboutUs_people .alkf_people_50 .pd_top115 {
         padding-top: 24px;
     }
 
-    .alkf_aboutUs_people .alkf_role{
+    .alkf_aboutUs_people .alkf_role {
         line-height: 120%;
+    }
+}
+
+.popup_menu_work .header .container {
+    padding: 0;
+}
+
+.popup_menu_work .header:after {
+    width: calc(100vw - 48px);
+}
+
+
+.popup_menu_work .content_menu_works {
+    padding: 0 24px;
+}
+
+.close_popMenuWork {
+    right: 24px;
+}
+
+.header-search-icon {
+    margin-left: 50px;
+}
+
+.popup_menu_work .headerMenuPopJS .header-menu-left {
+    opacity: 0;
+}
+
+.popup_menu_work .headerMenuPopJS.menu-open .header-menu-left {
+    opacity: 1;
+
+}
+
+.alkf_career_banner_des h2 {
+    font-size: clamp(40px, 3.3333333333333335vw, 64px);
+    line-height: 1;
+}
+
+@media (min-width: 200px) {
+    .about_us_content .alkf_mobile_text_4 .alkf_career_strategies .strategies_des:after {
+        display: none;
+    }
+
+    .alkf_search_page .alkf_insights_swiper {
+        margin: 100px 0;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .popup_menu_work .content_menu_works {
+        gap: 50px;
+    }
+
+    .popup_menu_work .content_menu_works {
+        margin-top: 120px;
+    }
+
+    .content_menu_works li {
+        margin-bottom: 24px;
+    }
+
+    .close_popMenuWork {
+        top: 120px;
+    }
+
+    .alkf_search_page .alkf_insights_swiper {
+        margin: 150px 0 200px 0;
+    }
+}
+
+@media (min-width: 1201px) {
+    .alkf_search_page .alkf_insights_swiper {
+        margin: 150px 0 200px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .popup_menu_work .content_menu_works {
+        gap: 24px;
+    }
+
+    .popup_menu_work .content_menu_works {
+        margin-top: 120px;
+    }
+
+    .close_popMenuWork {
+        top: 120px;
+    }
+
+    .content_menu_works li {
+        margin-bottom: 24px;
+    }
+
+    .content_menu_works li {
+        font-size: clamp(13px, 1.875vw, 36px);
+    }
+
+    .popup_menu_work .content_menu_works {
+        flex-wrap: wrap;
+    }
+
+    .popup_menu_work .close_popMenuWork {
+        width: 28px;
+        height: 28px;
+    }
+
+    .alkf_career_banner_des h2 {
+        font-size: clamp(26px, 1.3541666666666667vw, 26px);
+        line-height: 1;
+    }
+
+}
+
+/* custom.css dong 5237  tahy the */
+
+@media (min-width: 200px) {
+
+    .alkf_career_section .vision-item .number,
+    .alkf_career_section .vision-item .txt {
+        color: #111;
+    }
+
+    .about_us_content p,
+    .about_us_content span,
+    .alkf_title span,
+    .alkf_aboutUs_subtitle span,
+    .alkf_aboutUs_section p,
+    .alkf_project_aboutUs .alkf_role.text p,
+    .alkf_project_aboutUs .alkf_career_section .vision-item .number,
+    .alkf_project_aboutUs .alkf_career_section .vision-item .txt {
+        color: #FFF;
+    }
+}
+
+/*  =======  */
+
+.popup_menu_work .headerMenuPopJS .header-menu-right {
+    opacity: 0;
+}
+
+.popup_menu_work .headerMenuPopJS.menu-open .header-menu-right {
+    opacity: 1;
+}
+
+@media (min-width: 1201px) {
+    .alkf_career_section.alkf_career_sec_9 .job_container {
+        padding: 100px 60px;
+    }
+}
+
+@media (min-width: 1992px) {
+    .alkf_career_section.alkf_career_sec_9 .job_container {
+        padding: 100px 60px;
+    }
+
+    .job_desc,
+    .popup_menu_work {
+        max-width: 1800px;
     }
 }
