@@ -731,27 +731,29 @@
     function displayFileName(selector) {
         const inputElements = document.querySelectorAll(selector);
 
-        if (!inputElements || inputElements.length === 0) {
-            console.error(`No elements found with selector "${selector}".`);
-            return;
-        }
+        if (inputElements) {
+            if (!inputElements || inputElements.length === 0) {
+                console.error(`No elements found with selector "${selector}".`);
+                return;
+            }
 
-        inputElements.forEach((inputElement) => {
-            inputElement.addEventListener('change', (event) => {
-                const file = event.target.files[0];
-                const fileName = file ? file.name : 'No file selected';
+            inputElements.forEach((inputElement) => {
+                inputElement.addEventListener('change', (event) => {
+                    const file = event.target.files[0];
+                    const fileName = file ? file.name : 'No file selected';
 
-                const existingSpanElement = inputElement.nextElementSibling;
+                    const existingSpanElement = inputElement.nextElementSibling;
 
-                if (existingSpanElement && existingSpanElement.tagName === 'SPAN') {
-                    existingSpanElement.textContent = fileName;
-                } else {
-                    const spanElement = document.createElement('span');
-                    spanElement.textContent = fileName;
-                    inputElement.parentNode.insertBefore(spanElement, inputElement.nextSibling);
-                }
+                    if (existingSpanElement && existingSpanElement.tagName === 'SPAN') {
+                        existingSpanElement.textContent = fileName;
+                    } else {
+                        const spanElement = document.createElement('span');
+                        spanElement.textContent = fileName;
+                        inputElement.parentNode.insertBefore(spanElement, inputElement.nextSibling);
+                    }
+                });
             });
-        });
+        }
     }
 
 
