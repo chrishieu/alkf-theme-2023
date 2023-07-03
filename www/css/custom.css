@@ -6530,6 +6530,27 @@ label.label-focus {
 }
 
 @media (max-width: 767px) {
+    .founder_mob .dl_grid .alkf_career_main_contents p{
+        position:relative;
+        margin-top:20px;
+    }
+    .founder_mob .dl_grid .alkf_career_main_contents p::after{
+        content:"";
+        position:absolute;
+        left:0;
+        top:-10px;
+        width:50px;
+        height:2px;
+        background:#FFF
+    }
+    .alkf_career_main_strategies p{
+        font-size: clamp(16px, 9vw, 40px) !important;
+        line-height: clamp(12px, 10vw, 40px) !important;
+    }
+    .founder_mob .dl_grid{
+        grid-template-columns: 1fr !important;
+    }
+
     .alkf_career_section.alkf_career_sec_7 .text.pd_top277 {
         padding-top: 10.833333333333334vw;
     }

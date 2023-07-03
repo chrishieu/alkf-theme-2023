@@ -93,7 +93,7 @@ global $post;
 								</div>
 							</div>
 
-							<div class="alkf_career_about_contents text">
+							<div class="alkf_career_about_contents hide_on_mobile text">
 								<div class="alkf_career_main_contents">
 									<p><?php echo get_field('quote_text', $post); ?></p>
 								</div>
@@ -108,17 +108,29 @@ global $post;
 							<div class="img_fd">
 								<img src="<?php echo $quote_author_image['sizes']['4_6_small']; ?>" />
 							</div>
-							<div class="alkf_career_name pd_top120 text">
-								<p class="name"><?php echo get_field('quote_author', $post); ?></p>
-								<p class="role"><?php echo get_field('quote_author_position', $post); ?></p>
-							</div>
+                            <div class="alkf_career_about_contents text">
+                                <div class="alkf_career_main_contents">
+                                    <p>‘ Grew from family business to a firm due to good relationship, we maintain to be
+                                        boutique, one team spirit’
+                                    </p>
+                                <div>
+                                <div class="alkf_career_name pd_top120 text">
+                                    <p>
+		                                <?php
+		                                $quote_author = get_field('quote_author', $post);
+		                                $quote_author_position = get_field('quote_author_position', $post);
+		                                echo $quote_author . ', ' . $quote_author_position;
+		                                ?>
+                                    </p>
+                                </div>
+                            </div>
 						</div>
-						<div class="dl_grid">
-							<div class="empty"></div>
-							<div class="img_fd">
-								<img src="<?php echo $quote_author_image_2['sizes']['4_6_small']; ?>" />
-							</div>
-						</div>
+<!--						<div class="dl_grid">-->
+<!--							<div class="empty"></div>-->
+<!--							<div class="img_fd">-->
+<!--								<img src="--><?php //echo $quote_author_image_2['sizes']['4_6_small']; ?><!--" />-->
+<!--							</div>-->
+<!--						</div>-->
 					</div>
 
 					<?php $quote_image = get_field('quote_image', $post); ?>
@@ -138,6 +150,9 @@ global $post;
 									<div class="strategies_des pd_bot48">
 										<p><?php echo get_field('quote_brief_2', $post); ?></p>
 									</div>
+                                    <div class="img_fd hide_on_desktop">
+                                        <img src="<?php echo $quote_author_image_2['sizes']['4_6_small']; ?>" />
+                                    </div>
 								</div>
 								<!-- <div class="alkf_career_about_img hide_on_desktop">
 									<img src="./asset/image/career/founder-2.jpg" />
@@ -186,6 +201,9 @@ global $post;
 									<div class="strategies_des pd_bot48 ">
 										<p><?php echo get_field('quote_brief_3', $post); ?></p>
 									</div>
+                                    <div class="alkf_career_about_img hide_on_desktop">
+                                        <img src="<?php echo $quote_author_image_2['sizes']['4_6_small']; ?>" />
+                                    </div>
 								</div>
 								<div class="alkf_career_main_contents alkf_career_people_contents  pd_top48 ">
 									<p><?php echo get_field('quote_text_3', $post); ?></p>
