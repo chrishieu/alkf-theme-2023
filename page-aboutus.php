@@ -110,9 +110,7 @@ global $post;
 							</div>
                             <div class="alkf_career_about_contents text">
                                 <div class="alkf_career_main_contents">
-                                    <p>‘ Grew from family business to a firm due to good relationship, we maintain to be
-                                        boutique, one team spirit’
-                                    </p>
+	                                <?php echo get_field('quote_text', $post); ?>
                                 <div>
                                 <div class="alkf_career_name pd_top120 text">
                                     <p>
